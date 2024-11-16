@@ -1,4 +1,3 @@
-<h1>Quantitative estimation of proteins</h1>
     <p>The protein quantitation assays can be done by UV and visible range spectroscopy. Protein quantitation involves UV absorbance and colorimetric estimation. The most reliable and consistent colorimetric assays include two categories (i) with Cu-chelating agents (ii) and Protein-dye-based chemistry. </p>
     <p>Cu-chelating agents, (a) Lowry method (b) Bicinchoninic acid assay (BCA) and protein dye-based chemistry: Coomassie /Bradford</p>
     <h2>Selection of the protein assay</h2>
