@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BSA Concentration vs Absorbance</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+    <!-- jQuery and Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Chart.js (Using local file or CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style type="text/css">
+        .zero {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+        <div id="myhead">
+            <p id="masteps">This calculator uses a standard curve plot to calculate the concentration of unknown samples. Check sample data table (<a href="table.html" target="_blank">Open Table</a>)</p>
+            <a id="nextstep" class="btn btn-success dsphdd" href="step2.html">Next Step</a>
+        </div>
+        <hr>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 zero" style="border-right: 1px solid #aaa;padding-right: 15px">
+            <div class="form-group">
+                <h5 style="text-align: left;">Enter absorbance reading at 595 nm and known BSA Concentration (µg/ml)</h5>
+                <div id="inputContainer">
+                    <div class="row mb-2 zero">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="BSA Concentration (µg/ml)" required>
+                        </div>
+                        <div class="col">
+                            <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 595 nm" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <button id="addButton" class="btn btn-primary">+ Add</button>
+                <hr>
+            </div>
+            <div class="form-group" style="margin-top: 50px;">
+                <h5 style="text-align: left;">Enter unknown sample's absorbance reading at 595 nm</h5>
+                <input type="number" step="0.001" class="form-control" placeholder="Unknown sample" style="width: 100%;">
+            </div>
+            <div class="form-group mt-2">
+                <hr>
+                <button id="calculateButton" class="btn btn-success">Calculate</button>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 zero" style="min-width: 500px;">
+            <canvas id="bsaChart" width="400" height="200" style="margin-left: 55px;"></canvas>
+            <div style="padding-left:55px;" id="resid" class="col-lg-12 dsphdd">
+                <h4><i>The estimated concentration of the unknown sample is: <span id="conid"></span> µg/ml</i></h4>
+                <h5>Using eq: X=(Y-b)/m</h5>
+                <h5>Where<br>
+                    Y=<span id="unkwnpid"></span>: Unknown sample absorbance,<br>
+                    b=<span id="intcptid"></span>: Intercept at Y<br>
+                    m=<span id="slpid"></span>: Slope</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to add new input fields
+    document.getElementById('addButton').addEventListener('click', function() {
+        const inputContainer = document.getElementById('inputContainer');
+
+        const row = document.createElement('div');
+        row.classList.add('row', 'mb-2', 'zero');
+
+        const col1 = document.createElement('div');
+        col1.classList.add('col');
+        const input1 = document.createElement('input');
+        input1.type = 'number';
+        input1.classList.add('form-control');
+        input1.placeholder = 'BSA Concentration (µg/ml)';
+        input1.required = true;
+        col1.appendChild(input1);
+
+        const col2 = document.createElement('div');
+        col2.classList.add('col');
+        const input2 = document.createElement('input');
+        input2.type = 'number';
+        input2.step = '0.001';
+        input2.classList.add('form-control');
+        input2.placeholder = 'Absorbance at 595 nm';
+        input2.required = true;
+        col2.appendChild(input2);
+
+        row.appendChild(col1);
+        row.appendChild(col2);
+
+        inputContainer.appendChild(row);
+    });
+
+    // Function to collect data and plot the graph
+    document.getElementById('calculateButton').addEventListener('click', function() {
+        const concentrations = [];
+        const absorbances = [];
+
+        // Collect values from input fields
+        const rows = document.getElementById('inputContainer').getElementsByClassName('row');
+        for (let row of rows) {
+            const concentration = parseFloat(row.children[0].children[0].value);
+            const absorbance = parseFloat(row.children[1].children[0].value);
+
+            if (!isNaN(concentration) && !isNaN(absorbance)) {
+                concentrations.push(concentration);
+                absorbances.push(absorbance);
+            }
+        }
+
+        // Check if there are enough data points
+        if (concentrations.length < 2 || absorbances.length < 2) {
+            alert("Please enter at least two data points to plot the graph.");
+            return;
+        }
+
+        // Calculate linear regression parameters
+        const n = concentrations.length;
+        let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+
+        for (let i = 0; i < n; i++) {
+            sumX += concentrations[i];
+            sumY += absorbances[i];
+            sumXY += concentrations[i] * absorbances[i];
+            sumX2 += concentrations[i] * concentrations[i];
+        }
+
+        const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+        const intercept = (sumY * sumX2 - sumX * sumXY) / (n * sumX2 - sumX * sumX);
+
+        // Get the absorbance of the unknown sample
+        const unknownAbsorbance = parseFloat(document.querySelector('input[placeholder="Unknown sample"]').value);
+        if (isNaN(unknownAbsorbance)) {
+            alert("Please enter a valid absorbance for the unknown sample.");
+            return;
+        }
+
+        // Calculate the concentration of the unknown sample
+        const unknownConcentration = (unknownAbsorbance - intercept) / slope;
+        // alert("The estimated concentration of the unknown sample is: " + unknownConcentration.toFixed(2) + " µg/ml");
+        $('#resid').removeClass('dsphdd')
+        $('#conid').text(unknownConcentration.toFixed(2))
+        $('#intcptid').text(intercept.toFixed(2))
+        $('#slpid').text(slope.toFixed(2))
+        $('#unkwnpid').text(unknownAbsorbance.toFixed(2))
+        // Plot the graph using Chart.js
+        const ctx = document.getElementById('bsaChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: concentrations,
+                datasets: [
+                    {
+                        label: 'Absorbance at 595 nm',
+                        data: absorbances,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.4
+                    },
+                    {
+                        type: 'line',
+                        label: 'Line of Best Fit',
+                        data: concentrations.map(x => slope * x + intercept),
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'BSA Concentration (µg/ml)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Absorbance at 595 nm'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
