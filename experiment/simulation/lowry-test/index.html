@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		#CpHval{
+			width: 107px;position: absolute;margin-top: 10px;margin-left: 75px;z-index:2;text-align: center;font-size: 32px;line-height: 1;font-family: digital-7;background-color:#c3cbcb; width:100px;padding: 5px;border: 5px double #555;color: #555;border-radius: 5px;
+
+		}
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+      <div id="myhead"><p id="masteps"> The first step is to prepare the standard samples according to the provided table (<a href="table.html" target="_blank">See Table</a>). To begin, click on the micropipette.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+      </div>
+      <hr>
+
+      <button id="record" onclick="record();" class="btn btn-success dsphdd" style="position: absolute;margin-left:15px;margin-top: 15px; padding: 15px"> Run </button>
+      <span id="CpHval" class="counter dsphdd">00:00</span>
+
+
+	  <img src="imgs1/s0.png" id="s0" class="dsphd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s1.png" id="s1" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s2.png" id="s2" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s3.png" id="s3" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s4.png" id="s4" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s5.png" id="s5" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s6.png" id="s6" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s7.png" id="s7" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s8.png" id="s8" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s9.png" id="s9" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s10.png" id="s10" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s11.png" id="s11" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s12.png" id="s12" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s13.png" id="s13" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s14.png" id="s14" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s15.png" id="s15" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s16.png" id="s16" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s17.png" id="s17" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s18.png" id="s18" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s19.png" id="s19" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+	  <img src="imgs1/s20.png" id="s20" class="dsphdd" style="position: absolute; top: 350px; width: 325px;">
+
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:40px;width: 35px;height:200px;margin-top: 220px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:90px;width: 35px;height:200px;margin-top: 220px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:140px;width: 35px;height:200px;margin-top: 220px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:190px;width: 35px;height:200px;margin-top: 220px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:240px;width: 35px;height:200px;margin-top: 220px;border:none;background-color: transparent;">
+	  </button>
+
+
+	  <img src="imgs1/msrup.png" id="s5up" class="dsphdd" style="position: absolute;margin-left:15px; top: 138px; height:300px;">
+	  <img src="imgs1/msrup.png" id="s4up" class="dsphdd" style="position: absolute;margin-left:65px; top: 138px; height:300px;">
+	  <img src="imgs1/msrup.png" id="s3up" class="dsphdd" style="position: absolute;margin-left:115px; top: 138px; height:300px;">
+	  <img src="imgs1/msrup.png" id="s2up" class="dsphdd" style="position: absolute;margin-left:165px; top: 138px; height:300px;">
+	  <img src="imgs1/msrup.png" id="s1up" class="dsphdd" style="position: absolute;margin-left:215px; top: 138px; height:300px;">
+
+	  <img src="imgs1/msrdw.png" id="s5dw" class="dsphdd" style="position: absolute;margin-left:15px; top: 138px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="s4dw" class="dsphdd" style="position: absolute;margin-left:65px; top: 138px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="s3dw" class="dsphdd" style="position: absolute;margin-left:115px; top: 138px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="s2dw" class="dsphdd" style="position: absolute;margin-left:165px; top: 138px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="s1dw" class="dsphdd" style="position: absolute;margin-left:215px; top: 138px; height:300px;">
+
+	  <span id="s5R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 32px;margin-top: 100px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="s4R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 82px;margin-top: 100px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="s3R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 132px;margin-top: 100px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="s2R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 182px;margin-top: 100px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="s1R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 232px;margin-top: 100px;transform: rotate(270deg);width: 55px;">0.000</span>
+
+
+	  <img src="imgs1/dt.png" id="dt" style="position: absolute;margin-left:380px; top: 300px; height:265px;">
+
+	  <img src="imgs1/msrup.png" id="dt1up" class="dsphdd" style="position: absolute;margin-left:397px; top: 89px; height:300px;">
+	  <img src="imgs1/msrup.png" id="dt2up" class="dsphdd" style="position: absolute;margin-left:457px; top: 89px; height:300px;">
+	  <img src="imgs1/msrup.png" id="dt3up" class="dsphdd" style="position: absolute;margin-left:512px; top: 90px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="dt1dw" class="dsphdd" style="position: absolute;margin-left:397px; top: 89px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="dt2dw" class="dsphdd" style="position: absolute;margin-left:457px; top: 89px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="dt3dw" class="dsphdd" style="position: absolute;margin-left:512px; top: 90px; height:300px;">
+	  <span id="dt1R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 414px;margin-top: 54px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="dt2R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 474px;margin-top: 54px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <span id="dt3R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 529px;margin-top: 54px;transform: rotate(270deg);width: 55px;">0.000</span>
+
+
+
+	  <button id="step12" onclick="step12();" style="position: absolute;margin-left:418px;width: 45px;height:250px;margin-top: 173px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="step5" onclick="step5();" style="position: absolute;margin-left:477px;width: 45px;height:250px;margin-top: 173px;border:none;background-color: transparent;">
+	  </button>
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left:535px;width: 45px;height:250px;margin-top: 173px;border:none;background-color: transparent;">
+	  </button>
+	  
+	 
+
+
+
+
+	  <button id="step8" onclick="step8();" style="position: absolute;margin-left:675px; top: 350px; height:200px;border:none;background-color: transparent;">
+	  	<img src="imgs1/dtx.png" id="dtx" style="height:200px;">
+	  </button>
+	  <img src="imgs1/msrup.png" id="dtxup" class="dsphdd" style="position: absolute;margin-left:692px; top: 144px; height:300px;">
+	  <img src="imgs1/msrdw.png" id="dtxdw" class="dsphdd" style="position: absolute;margin-left:692px; top: 144px; height:300px;">
+	  <span id="dtxR" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 709px;margin-top: 107px;transform: rotate(270deg);width: 55px;">0.000</span>
+
+	
+
+	  
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 900px;width: auto;margin-top: 100px;border: none;">
+	  	<img src="imgs1/mtstd1.png" id="mtstd1" style="position: absolute;height: 325px;width: auto;" >
+	  	<img src="imgs1/mtstd0.png" id="mtstd0" class="dsphdd" style="position: absolute;height: 325px;width: auto;" >
+	  </button>
+	  <img src="imgs1/msrs.png" id="msrs" class="dsphdd" style="position: absolute;margin-left:835px; top: 150px; height:300px;">
+	   <button id="step2" onclick="step2();" style="position: absolute;margin-left:865px;width: 50px;height: 50px;margin-top: 55px;border:none;background-color: transparent;">
+	  </button>
+	  <span id="msrsR" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 854px;margin-top: 120px;transform: rotate(270deg);width: 55px;">0.000</span>
+
+
+	  
+	  
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 21px;margin-top: 435px;">Standard Samples (S5 | S4 | S3 | S2 | S1)</span>
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 385px;margin-top: 435px;">FC Reagent | Distilled Water | BSA</span>
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 690px;margin-top: 435px;">AC Reagent</span>
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 950px;margin-top: 435px;">Micropipette</span>
+		
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	if (step==0) 
+	{
+	$("#mtstd1").addClass("dsphdd");
+	$("#mtstd0").removeClass("dsphdd");
+	$("#msrs").removeClass("dsphdd");
+	$("#masteps").text("Next, click on the micropipette wheel to set the initial reading (0.2 ml) according to the table for measuring the BSA solution.");
+	step=1;
+	}
+	else if (step==10) 
+	{
+	$("#mtstd1").addClass("dsphdd");
+	$("#mtstd0").removeClass("dsphdd");
+	$("#msrs").removeClass("dsphdd");
+	$("#masteps").text("click on the micropipette wheel to set it's reading to 0.4 ml as per the table.");
+	step=11;
+	}	
+}
+
+
+function step2()
+{
+	if (step==1) 
+	{
+	$("#msrsR").removeClass("dsphdd");
+	$(".red").text("0.2");
+	$("#masteps").text("Next, click on the BSA solution to measure 0.2 ml of it for the first sample preparation.");
+	step=2;
+	}
+	else if (step==4)
+	{
+		$("#msrsR").removeClass("dsphdd");
+		$(".red").text("0.8");
+		$("#masteps").text("Next, click on the distilled water tube to add 0.8 ml of it for the first sample preparation.");
+		step=5;
+	}
+	else if (step==7)
+	{
+		$("#msrsR").removeClass("dsphdd");
+		$(".red").text("4.0");
+		$("#masteps").text("Next, click on the AC Reagent flask to add 4 ml of it for the first sample preparation.");
+		step=8;
+	}
+	else if (step==11)
+	{
+		$("#msrsR").removeClass("dsphdd");
+		$(".red").text("0.4");
+		$("#masteps").text("Next, click on the FC Reagent tube to add 0.4 ml of it for the first sample preparation.");
+		step=12;
+	}	
+}
+
+function step3()
+{
+	if (step==2) 
+	{
+	$("#msrs").addClass("dsphdd");
+	$("#msrsR").addClass("dsphdd");
+	$("#dt3R").removeClass("dsphdd");
+	$("#dt3dw").removeClass("dsphdd");
+	setTimeout(function() {
+        $("#dt3dw").addClass("dsphdd");
+        $("#dt3up").removeClass("dsphdd");
+        
+    }, 800);
+    setTimeout(function() {
+        $("#dt3up").addClass("dsphdd");
+        $("#dt3R").addClass("dsphdd");
+        $("#s1up").removeClass("dsphdd");
+        $("#s1R").removeClass("dsphdd");
+        
+    }, 1600);
+    setTimeout(function() {
+        $("#s1up").addClass("dsphdd");
+        $("#s1dw").removeClass("dsphdd");
+        $("#s0").addClass("dsphdd");
+        $("#s1").removeClass("dsphdd");
+    }, 2400);
+    setTimeout(function() {
+        $("#s1dw").addClass("dsphdd");
+        $("#s1R").addClass("dsphdd");
+        $("#msrs").removeClass("dsphdd");
+        $("#record").removeClass("dsphdd");
+         $("#masteps").text("Next,Click on the 'Run' button to add the BSA solution to prepare the remaining samples according to the table.");
+    }, 3200);
+
+	step=3;
+	}	
+}
+
+
+function step5()
+{
+	if (step==5) 
+	{
+	$("#msrs").addClass("dsphdd");
+	$("#msrsR").addClass("dsphdd");
+	$("#dt2R").removeClass("dsphdd");
+	$("#dt2dw").removeClass("dsphdd");
+	setTimeout(function() {
+        $("#dt2dw").addClass("dsphdd");
+        $("#dt2up").removeClass("dsphdd");
+        
+    }, 800);
+    setTimeout(function() {
+        $("#dt2up").addClass("dsphdd");
+        $("#dt2R").addClass("dsphdd");
+        $("#s1up").removeClass("dsphdd");
+        $("#s1R").removeClass("dsphdd");
+        
+    }, 1600);
+    setTimeout(function() {
+        $("#s1up").addClass("dsphdd");
+        $("#s1dw").removeClass("dsphdd");
+        $("#s5").addClass("dsphdd");
+        $("#s6").removeClass("dsphdd");
+    }, 2400);
+    setTimeout(function() {
+        $("#s1dw").addClass("dsphdd");
+        $("#s1R").addClass("dsphdd");
+        $("#msrs").removeClass("dsphdd");
+        $("#record").removeClass("dsphdd");
+        $("#masteps").text("Click on the 'Run' button to add the distilled water to prepare the remaining samples according to the table.");
+    }, 3200);
+	step=6;
+	}	
+}
+
+function step8()
+{
+	if (step==8) 
+	{
+	$("#msrs").addClass("dsphdd");
+	$("#msrsR").addClass("dsphdd");
+	$("#dtxR").removeClass("dsphdd");
+	$("#dtxdw").removeClass("dsphdd");
+	setTimeout(function() {
+        $("#dtxdw").addClass("dsphdd");
+        $("#dtxup").removeClass("dsphdd");
+        
+    }, 800);
+    setTimeout(function() {
+        $("#dtxup").addClass("dsphdd");
+        $("#dtxR").addClass("dsphdd");
+        $("#s1up").removeClass("dsphdd");
+        $("#s1R").removeClass("dsphdd");
+        
+    }, 1600);
+    setTimeout(function() {
+        $("#s1up").addClass("dsphdd");
+        $("#s1dw").removeClass("dsphdd");
+        $("#s10").addClass("dsphdd");
+        $("#s11").removeClass("dsphdd");
+    }, 2400);
+    setTimeout(function() {
+        $("#s1dw").addClass("dsphdd");
+        $("#s1R").addClass("dsphdd");
+        $("#msrs").removeClass("dsphdd");
+        $("#record").removeClass("dsphdd");
+        $("#masteps").text("Click on the 'Run' button to add the AC Reagent to prepare the remaining samples according to the table.");
+    }, 3200);
+	step=9;
+	}	
+}
+
+
+function step12()
+{
+	if (step==12) 
+	{
+	$("#msrs").addClass("dsphdd");
+	$("#msrsR").addClass("dsphdd");
+	$("#dt1R").removeClass("dsphdd");
+	$("#dt1dw").removeClass("dsphdd");
+	setTimeout(function() {
+        $("#dt1dw").addClass("dsphdd");
+        $("#dt1up").removeClass("dsphdd");
+        
+    }, 800);
+    setTimeout(function() {
+        $("#dt1up").addClass("dsphdd");
+        $("#dt1R").addClass("dsphdd");
+        $("#s1up").removeClass("dsphdd");
+        $("#s1R").removeClass("dsphdd");
+        
+    }, 1600);
+    setTimeout(function() {
+        $("#s1up").addClass("dsphdd");
+        $("#s1dw").removeClass("dsphdd");
+        $("#s15").addClass("dsphdd");
+        $("#s16").removeClass("dsphdd");
+    }, 2400);
+    setTimeout(function() {
+        $("#s1dw").addClass("dsphdd");
+        $("#s1R").addClass("dsphdd");
+        $("#msrs").removeClass("dsphdd");
+        $("#record").removeClass("dsphdd");
+        $("#masteps").text("Click on the 'Run' button to add the FC Reagent to prepare the remaining samples according to the table.");
+    }, 3200);
+	step=13;
+	}	
+}
+
+
+
+let TestData = [
+	[0.2, 0.8, 4.0, 0.4],
+    [0.4, 0.6, 4.0, 0.4],
+    [0.6, 0.4, 4.0, 0.4],
+    [0.8, 0.2, 4.0, 0.4],
+    [1.00, 0.0, 4.0, 0.4]
+];
+
+function record()
+{
+	if (step==3) 
+	{
+		for (let i = 0; i < TestData.length-1; i++) 
+    	{
+        (function(i) {
+            setTimeout(function() {
+
+
+                setTimeout(() => {
+	                $(".red").text(TestData[i+1][0]);
+	                $("#msrsR").removeClass("dsphdd");
+                }, 800);
+
+                setTimeout(() => {
+		            $("#msrs").addClass("dsphdd");
+					$("#msrsR").addClass("dsphdd");
+					$("#dt3R").removeClass("dsphdd");
+					$("#dt3dw").removeClass("dsphdd");
+                }, 1600);
+
+                setTimeout(() => {
+		            $("#dt3dw").addClass("dsphdd");
+	        		$("#dt3up").removeClass("dsphdd");
+                }, 2400);
+
+                setTimeout(function() {
+			        $("#dt3up").addClass("dsphdd");
+			        $("#dt3R").addClass("dsphdd");
+			        $("#s" + (i + 2)+"up").removeClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").removeClass("dsphdd");
+			        
+			    }, 3200);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"up").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"dw").removeClass("dsphdd");
+			        $("#s"+ (i + 1)).addClass("dsphdd");
+			        $("#s"+ (i + 2)).removeClass("dsphdd");
+			    }, 4000);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"dw").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").addClass("dsphdd");
+			        $("#msrs").removeClass("dsphdd");
+			        $("#record").addClass("dsphdd");
+			        $("#masteps").text("Now, we will use distilled water to prepare our samples. Set the micropipette's initial reading to 0.8 ml as per the table by clicking on the micropipette wheel.");
+			    }, 4800);
+        
+       }, i * 4800); // Delay in milliseconds (27,200 ms)        
+       })(i);
+   	   }
+	
+   	step=4
+	}
+
+
+	else if (step==6) 
+	{
+		for (let i = 0; i < TestData.length-2; i++) 
+    	{
+        (function(i) {
+            setTimeout(function() {
+
+
+                setTimeout(() => {
+	                $(".red").text(TestData[i+1][1]);
+	                $("#msrsR").removeClass("dsphdd");
+                }, 800);
+
+                setTimeout(() => {
+		            $("#msrs").addClass("dsphdd");
+					$("#msrsR").addClass("dsphdd");
+					$("#dt2R").removeClass("dsphdd");
+					$("#dt2dw").removeClass("dsphdd");
+                }, 1600);
+
+                setTimeout(() => {
+		            $("#dt2dw").addClass("dsphdd");
+	        		$("#dt2up").removeClass("dsphdd");
+                }, 2400);
+
+                setTimeout(function() {
+			        $("#dt2up").addClass("dsphdd");
+			        $("#dt2R").addClass("dsphdd");
+			        $("#s" + (i + 2)+"up").removeClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").removeClass("dsphdd");
+			        
+			    }, 3200);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"up").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"dw").removeClass("dsphdd");
+			        $("#s"+ (i + 6)).addClass("dsphdd");
+			        $("#s"+ (i + 7)).removeClass("dsphdd");
+			    }, 4000);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"dw").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").addClass("dsphdd");
+			        $("#msrs").removeClass("dsphdd");
+			        $("#record").addClass("dsphdd");
+			        $("#masteps").text("Now, we will use the AC Reagent to prepare our samples. For this, set the micropipette's reading to 4 ml as per the table by clicking on the micropipette wheel.");
+			    }, 4800);
+        
+       }, i * 4800); // Delay in milliseconds (27,200 ms)        
+       })(i);
+   	   }
+	
+   	step=7;
+	}
+
+
+
+	else if (step==9) //9
+	{
+		for (let i = 0; i < TestData.length-1; i++) 
+    	{
+        (function(i) {
+            setTimeout(function() {
+
+                if (i==0) 
+                {
+                	$("#msrs").addClass("dsphdd");
+                	$(".red").text(TestData[i+1][2]);
+
+                }
+                $("#dtxR").removeClass("dsphdd");
+				$("#dtxdw").removeClass("dsphdd");
+                setTimeout(() => {
+		            $("#dtxdw").addClass("dsphdd");
+	        		$("#dtxup").removeClass("dsphdd");
+                }, 800);
+
+                setTimeout(function() {
+			        $("#dtxup").addClass("dsphdd");
+			        $("#dtxR").addClass("dsphdd");
+			        $("#s" + (i + 2)+"up").removeClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").removeClass("dsphdd");
+			        
+			    }, 1600);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"up").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"dw").removeClass("dsphdd");
+			        $("#s"+ (i + 11)).addClass("dsphdd");
+			        $("#s"+ (i + 12)).removeClass("dsphdd");
+			    }, 2400);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"dw").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").addClass("dsphdd");
+			        $("#record").addClass("dsphdd");
+			    }, 3200);
+        
+       }, i * 3200); // Delay in milliseconds (27,200 ms)        
+       })(i);
+   	   }
+
+	   	setTimeout(function() {
+	   		$("#mtstd0").addClass("dsphdd");
+	        $("#mtstd1").removeClass("dsphdd");
+	        $("#masteps").text("Now, Incubate the samples at room temperature for 10 minutes.");
+			$("#CpHval").removeClass("dsphdd");
+	        startTimer("10:00");
+		}, 13000);
+
+	   	setTimeout(function() {
+	   		$("#masteps").text("Now, we will use the FC Reagent to prepare our samples. For this, set the micropipette.");
+	   		$("#CpHval").addClass("dsphdd");
+		}, 23300);
+
+	
+   	step=10;
+	}
+
+
+
+	else if (step==13) 
+	{
+		for (let i = 0; i < TestData.length-1; i++) 
+    	{
+        (function(i) {
+            setTimeout(function() {
+
+
+
+            	if (i==0) 
+                {
+                	$("#msrs").addClass("dsphdd");
+                	$(".red").text(TestData[i+1][3]);
+
+                }
+                $("#dt1R").removeClass("dsphdd");
+				$("#dt1dw").removeClass("dsphdd");
+                setTimeout(() => {
+		            $("#dt1dw").addClass("dsphdd");
+	        		$("#dt1up").removeClass("dsphdd");
+                }, 800);
+
+                setTimeout(function() {
+			        $("#dt1up").addClass("dsphdd");
+			        $("#dt1R").addClass("dsphdd");
+			        $("#s" + (i + 2)+"up").removeClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").removeClass("dsphdd");
+			        
+			    }, 1600);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"up").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"dw").removeClass("dsphdd");
+			        $("#s"+ (i + 16)).addClass("dsphdd");
+			        $("#s"+ (i + 17)).removeClass("dsphdd");
+			    }, 2400);
+			    setTimeout(function() {
+			        $("#s"+ (i + 2)+"dw").addClass("dsphdd");
+			        $("#s"+ (i + 2)+"R").addClass("dsphdd");
+			        // $("#msrs").removeClass("dsphdd");
+			        // $("#record").removeClass("dsphdd");
+			    }, 3200);
+        
+       }, i * 3200); // Delay in milliseconds (27,200 ms)        
+       })(i);
+   	   }
+
+		setTimeout(function() {
+	   		$("#mtstd0").addClass("dsphdd");
+	        $("#mtstd1").removeClass("dsphdd");
+	        $("#masteps").text("Now, Incubate the samples at room temperature for 15 minutes.");
+			$("#CpHval").removeClass("dsphdd");
+	        startTimer("15:00");
+		}, 12800);
+
+		setTimeout(function() {
+	   		$("#masteps").text("To proceed with the further steps, click on the 'NextStep' button");
+	   		$("#nextstep").css("visibility", "visible");
+	   		$("#CpHval").addClass("dsphdd");
+		}, 29000);
+   	step=14;
+	}
+
+
+
+
+}
+
+
+function startTimer(mytime) {
+  // Parse the "mytime" string (e.g., "10:00")
+  var [targetMinutes, targetSeconds] = mytime.split(":").map(Number);
+  var targetTotalSeconds = targetMinutes * 60 + targetSeconds; // Total seconds in original time
+  
+  var duration = targetTotalSeconds * 1000 / 60; // Scale the timer to display in 1/60 of actual time (1 min displays in 1 sec)
+  var startTime = new Date().getTime();
+  
+  var timerInterval = setInterval(function() {
+    var currentTime = new Date().getTime();
+    var elapsedTime = currentTime - startTime;
+    
+    if (elapsedTime >= duration) {
+      clearInterval(timerInterval);
+      $("#CpHval").text(mytime); // Show the target time when done
+    } else {
+      // Calculate the fast "minute-second" display based on scaled elapsed time
+      var progress = elapsedTime / duration;
+      var displayMinutes = Math.floor(progress * targetMinutes);
+      var displaySeconds = Math.floor((progress * 60) % 60);
+
+      // Format the display as "M:SS"
+      var timerText = displayMinutes + ":" + (displaySeconds < 10 ? "0" : "") + displaySeconds;
+      $("#CpHval").text(timerText);
+    }
+  }, 50); // Update every 50 milliseconds for a smooth countdown
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
