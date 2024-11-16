@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BSA Concentration vs Absorbance</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+    <!-- jQuery and Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Chart.js (Using local file or CDN) -->
+    <script src="js/chart.js"></script>
+    <style type="text/css">
+        .zero{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row zero">
+    <div id="main"> 
+        <div id="myhead">
+            <p id="masteps">The first step is to prepare a blank sample or control. To do this, click on Microliter Pipette.</p>
+            <a id="nextstep" class="btn btn-success dsphdd" href="step2.html">Next Step</a>
+        </div>
+        <hr>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 zero">
+            <div class="form-group">
+                <h5>Enter absorbance reading at 595 nm and known BSA Concentration (µg/ml)</h5>
+                <div id="inputContainer">
+                    <div class="row mb-2 zero">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="BSA Concentration (µg/ml)" required >
+                        </div>
+                        <div class="col">
+                            <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 595 nm" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <button id="addButton" class="btn btn-primary" style="">+ Add</button>
+            </div>
+            <div class="form-group" style="margin-top: 50px;">
+                <h5>Enter unknown sample's absorbance reading at 595 nm</h5>
+                <input type="text" class="form-control" placeholder="Unknown sample" style="width: 100%;">
+            </div>
+            <div class="form-group mt-2">
+                <button id="calculateButton" class="btn btn-success">Calculate</button>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 zero" style="min-width: 500px;">
+            <canvas id="bsaChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to add new input fields
+    document.getElementById('addButton').addEventListener('click', function() {
+        const inputContainer = document.getElementById('inputContainer');
+
+        const row = document.createElement('div');
+        row.classList.add('row', 'mb-2','zero');
+
+        const col1 = document.createElement('div');
+        col1.classList.add('col');
+        const input1 = document.createElement('input');
+        input1.type = 'number';
+        input1.classList.add('form-control');
+        input1.placeholder = 'BSA Concentration (µg/ml)';
+        input1.required = true;
+        col1.appendChild(input1);
+
+        const col2 = document.createElement('div');
+        col2.classList.add('col');
+        const input2 = document.createElement('input');
+        input2.type = 'number';
+        input2.step = '0.001';
+        input2.classList.add('form-control');
+        input2.placeholder = 'Absorbance at 595 nm';
+        input2.required = true;
+        col2.appendChild(input2);
+
+        row.appendChild(col1);
+        row.appendChild(col2);
+
+        inputContainer.appendChild(row);
+    });
+
+    // Function to collect data and plot the graph
+    document.getElementById('calculateButton').addEventListener('click', function() {
+        const concentrations = [];
+        const absorbances = [];
+
+        // Collect values from input fields
+        const rows = document.getElementById('inputContainer').getElementsByClassName('row');
+        for (let row of rows) {
+            const concentration = parseFloat(row.children[0].children[0].value);
+            const absorbance = parseFloat(row.children[1].children[0].value);
+
+            if (!isNaN(concentration) && !isNaN(absorbance)) {
+                concentrations.push(concentration);
+                absorbances.push(absorbance);
+            }
+        }
+
+        // Check if there are enough data points
+        if (concentrations.length < 2 || absorbances.length < 2) {
+            alert("Please enter at least two data points to plot the graph.");
+            return;
+        }
+
+        // Plot the graph using Chart.js
+        const ctx = document.getElementById('bsaChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: concentrations,
+                datasets: [{
+                    label: 'Absorbance at 595 nm',
+                    data: absorbances,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'BSA Concentration (µg/ml)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Absorbance at 595 nm'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
