@@ -7,4 +7,4 @@
 ### Developers
 | SNo. | Name | Email | Institute | ID |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 | Abhishek Toofani | abhishektoofani@dei.ac.in | DEI, Agra | xxx |
+| 1 | Abhishek Toofani | abhishektoofany@gmail.com | DEI, Agra | xxx |

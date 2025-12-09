@@ -66,18 +66,19 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps"> First step is the preparation of Bradford reagent. Click on Coomassie Brilliant Blue G-250 dye to weight 100mg of it. </p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
-      </div>
-      <hr>
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">First step is the preparation of Bradford reagent. Click on Coomassie Brilliant Blue G-250 dye to weight 100mg of it.</p> <a id="nextstep" class="btn btn-success" href="step2.html"> Next Step</a>
+		</div>
+		<div id="main"> 
       <span type="text" class="counter" id="CpHval">0.0</span>
-	  <img src="imgs1/wt.png" id="wt" style="position: absolute; top: 375px; width: 210px;">
-	  <img src="imgs1/wt2.png" id="wt2" class="dsphdd" style="position: absolute; top: 375px; width: 210px;">
-	  <img src="imgs1/wt3.png" id="wt3" class="dsphdd" style="position: absolute; top: 375px; width: 210px;">
+	  <img src="imgs1/wt.png" id="wt" style="position: absolute; margin-top: 255px; width: 210px;">
+	  <img src="imgs1/wt2.png" id="wt2" class="dsphdd" style="position: absolute; margin-top: 255px; width: 210px;">
+	  <img src="imgs1/wt3.png" id="wt3" class="dsphdd" style="position: absolute; margin-top: 255px; width: 210px;">
 
 	  <button id="step2" onclick="step2();" style="position: absolute;margin-left:50px;width: 115px;height: 50px;margin-top: 225px;border: none;background-color: transparent;">
 	  </button>
-	  <img src="imgs1/plt3.png" id="plt3" class="dsphdd" style="position: absolute; top: 135px; width: 100px;margin-left: 470px">
+	  <img src="imgs1/plt3.png" id="plt3" class="dsphdd" style="position: absolute; margin-top: 15px; width: 100px;margin-left: 470px">
 
 	  <img src="imgs1/blupwd1.png" class="dsphdd" id="blupwd1" style="position: absolute;margin-top: 120px;margin-left: 120px;width: 155px;z-index: 5;">
 	
