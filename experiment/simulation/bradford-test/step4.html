@@ -66,16 +66,18 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">In this step, the same procedure is repeated to measure the absorbance values of the prepared samples at 595 nm. To do this, simply click the Run button.</p> <a id="nextstep" class="btn btn-success" href="calculator.html"> Next Step</a>
-      	<button id="stepx" onclick="stepx();" class="btn btn-success" style="position: absolute;height: 35px;">Run
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">In this step, the same procedure is repeated to measure the absorbance values of the prepared samples at 595 nm. To do this, simply click the Run button.</p> <a id="nextstep" class="btn btn-success" href="calculator.html"> Next Step</a>
+		</div>
+		<div id="main">
+
+		<button id="stepx" onclick="stepx();" class="btn btn-success" style="position: absolute;height: 35px;width: 100px;">Run
 	  </button>
-      </div>
-      <hr>
 	  <img src="imgs4/msrc.png" id="msrc" style="position: absolute; top: 150px; width: 400px;">
 	  <img src="imgs4/msro.png" id="msro" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
 	  <img src="imgs4/msrt.png" id="msrt" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
-	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 65px;"></span>
+	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 135px;"></span>
 
 	  <button id="step3" onclick="step3();" style="position: absolute;margin-left:15px;width: 135px;height: 125px;margin-top: 110px;border: none;background-color: transparent;">
 	  </button>
@@ -147,10 +149,10 @@
 
 	 
 	  
-	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 5px;margin-top: 275px;">Spectrophotometer</span>
-		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 225px;margin-top: 425px;">Standard Samples </span>
-		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 740px;margin-top: 430px;">Cuvette</span>
-		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 910px;margin-top: 430px;">Micropipette</span>
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 237px;margin-top: 63px;">Spectrophotometer</span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 225px;margin-top: 500px;">Standard Samples </span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 740px;margin-top: 500px;">Cuvette</span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 910px;margin-top: 500px;">Micropipette</span>
 
 	  
     </div>

@@ -66,16 +66,16 @@
 <body>
 
 <div class="row zero">
-    <div id="main"> 
-      <div id="myhead"><p id="masteps">Next step is to measure the absorbance of Blank and Test sample at 562nm using spectrophotometer. For this click on blank sample.</p> <a id="nextstep" class="btn btn-success" href="step3.html"> Next Step</a>
-      </div>
-      <hr>
-
-	  <img src="imgs2/msrc.png" id="msrc" style="position: absolute; top: 300px; width: 400px;">
-	  <img src="imgs2/msro.png" id="msro" class="dsphdd" style="position: absolute; top: 300px; width: 400px;">
-	  <img src="imgs2/msrb.png" id="msrb" class="dsphdd" style="position: absolute; top: 300px; width: 400px;">
-	  <img src="imgs2/msrt.png" id="msrt" class="dsphdd" style="position: absolute; top: 300px; width: 400px;">
-	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 215px;"></span>
+	<div id="leftPanel">
+		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+		<p id="masteps">Next step is to measure the absorbance of Blank and Test sample at 562nm using spectrophotometer. For this click on blank sample.</p> <a id="nextstep" class="btn btn-success" href="step3.html"> Next Step</a>
+	</div>
+	<div id="main"> 
+	  <img src="imgs2/msrc.png" id="msrc" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs2/msro.png" id="msro" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs2/msrb.png" id="msrb" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs2/msrt.png" id="msrt" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 217px;"></span>
 
 	  <button id="step3" onclick="step3();" style="position: absolute;margin-left:15px;width: 135px;height: 125px;margin-top: 260px;border:none ;background-color: transparent;">
 	  </button>
@@ -90,37 +90,37 @@
 
 	  
 
-	  <button id="step1" onclick="step1();" style="position: absolute; margin-left:450px;top: 435px;border:none ;background-color: transparent;">
+	  <button id="step1" onclick="step1();" style="position: absolute; margin-left:450px;margin-top: 317px;border:none ;background-color: transparent;">
 	  		<img src="imgs2/sample.png" id="sample" style="height: 100px;">
 			<img src="imgs2/e1.png" id="e1" class="dsphdd" style="height: 100px;">
 			<img src="imgs2/e2.png" id="e2" class="dsphdd" style="height: 100px;">
 	  </button>
 
-	  <img src="imgs2/pr0.png" id="pr0" class="dsphdd" style="position: absolute; margin-left:637px;top: 400px; height: 135px;">
-	  <img src="imgs2/prst.png" id="prst" class="dsphdd" style="position: absolute; margin-left:637px;top: 400px; height: 135px;">
-	  <img src="imgs2/prblk.png" id="prblk" class="dsphdd" style="position: absolute; margin-left:637px;top: 400px; height: 135px;">
+	  <img src="imgs2/pr0.png" id="pr0" class="dsphdd" style="position: absolute; margin-left:637px;margin-top: 280px; height: 135px;">
+	  <img src="imgs2/prst.png" id="prst" class="dsphdd" style="position: absolute; margin-left:637px;margin-top: 280px; height: 135px;">
+	  <img src="imgs2/prblk.png" id="prblk" class="dsphdd" style="position: absolute; margin-left:637px;margin-top: 280px; height: 135px;">
 
 
 	  
-	  <button id="step4" onclick="step4();" style="position: absolute;position: absolute; margin-left:725px;top: 417px; height: 125px;border:none;background-color: transparent;">
+	  <button id="step4" onclick="step4();" style="position: absolute;position: absolute; margin-left:725px;margin-top: 295px; height: 125px;border:none;background-color: transparent;">
 		  	<img src="imgs2/p0.png" id="p0" style="height: 125px;">
 		  	<img src="imgs2/pw.png" id="pw" class="dsphdd" style="height: 125px;">
 		    <img src="imgs2/p3.png" id="p3" class="dsphdd" style="height: 125px;">
 	  </button>
 
 
-	  <img src="imgs2/inup.png" id="tnup" class="dsphdd" style="position: absolute; margin-left:611px;top: 223px; height: 300px;">
-	  <img src="imgs2/indw.png" id="tndw" class="dsphdd" style="position: absolute; margin-left:611px;top: 223px; height: 300px;">
+	  <img src="imgs2/inup.png" id="tnup" class="dsphdd" style="position: absolute; margin-left:611px;margin-top: 103px; height: 300px;">
+	  <img src="imgs2/indw.png" id="tndw" class="dsphdd" style="position: absolute; margin-left:611px;margin-top: 103px; height: 300px;">
 
 
-	  <img src="imgs2/inup.png" id="pnup" class="dsphdd" style="position: absolute; margin-left:700px;top: 212px; height: 300px;">
-	  <img src="imgs2/indw.png" id="pndw" class="dsphdd" style="position: absolute; margin-left:700px;top: 212px; height: 300px;">
+	  <img src="imgs2/inup.png" id="pnup" class="dsphdd" style="position: absolute; margin-left:700px;margin-top: 90px; height: 300px;">
+	  <img src="imgs2/indw.png" id="pndw" class="dsphdd" style="position: absolute; margin-left:700px;margin-top: 90px; height: 300px;">
 
 	  
 	  
-	  <button id="step2" onclick="step2();" style="position: absolute; margin-left:895px;top: 55px; height: 325px;border: none;">
-	  	<img src="imgs2/mstd.png" id="mstd" style="position: absolute; height: 325px;">
-	  	<img src="imgs2/mstd0.png" id="mstd0" class="dsphdd" style="position: absolute; height: 325px;">
+	  <button id="step2" onclick="step2();" style="position: absolute; margin-left:895px;margin-top: 95px; height: 325px;border: none;background-color: transparent;">
+	  	<img src="imgs2/mstd.png" id="mstd" style="height: 325px;">
+	  	<img src="imgs2/mstd0.png" id="mstd0" class="dsphdd" style="height: 325px;">
 	  </button>
 
 	  <img src="imgs2/mup.png" id="mupx" class="dsphdd" style="position: absolute; margin-left:820px;top: 150px; height: 300px;">
