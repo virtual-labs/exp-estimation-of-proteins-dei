@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		#CpHval{
+			border:none;width: 107px;position: absolute;margin-top: 310px;margin-left: 52px;height: 25px;z-index:2;text-align: center;font-size: 21px;line-height: 1;font-family: digital-7;
+		}
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">Next step is to prepare the standard samples as given in the table <a href="table-bra.html" target="_blank">(Open Table)</a>. For this click on the standard samples.</p> <a id="nextstep" class="btn btn-success" href="step3-bra.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+	  <img src="imgs2-bra/s0.png" id="s0" class="" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e1.png" id="e1" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s1.png" id="s1" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e2.png" id="e2" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s2.png" id="s2" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e3.png" id="e3" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s3.png" id="s3" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e4.png" id="e4" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s4.png" id="s4" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e5.png" id="e5" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s5.png" id="s5" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e6.png" id="e6" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s6.png" id="s6" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e7.png" id="e7" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s7.png" id="s7" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e8.png" id="e8" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s8.png" id="s8" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e9.png" id="e9" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s9.png" id="s9" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/e10.png" id="e10" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+	  <img src="imgs2-bra/s10.png" id="s10" class="dsphdd" style="position: absolute; margin-top: 350px; width: 500px;">
+
+
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left:0px;width: 500px;height: 100px;margin-top: 345px;border: none;background-color: transparent;">
+	  </button>
+
+
+
+
+
+
+
+	  <img src="imgs2-bra/pr0.png" id="pr0" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/pr1.png" id="pr1" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/pr2.png" id="pr2" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o1.png" id="o1" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o2.png" id="o2" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o3.png" id="o3" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o4.png" id="o4" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o5.png" id="o5" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o6.png" id="o6" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o7.png" id="o7" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o8.png" id="o8" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o9.png" id="o9" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  <img src="imgs2-bra/o10.png" id="o10" class="dsphdd" style="position: absolute; top: 350px; height: 125px;margin-left: 555px;">
+	  
+
+	  <img src="imgs2-bra/mup.png" id="prup" class="dsphdd" style="position: absolute; top: 112px; height: 325px;margin-left: 523px;">
+	  <img src="imgs2-bra/mdwn.png" id="prdw" class="dsphdd" style="position: absolute; top: 112px; height: 325px;margin-left: 523px;">
+
+
+
+
+	  <img src="imgs2-bra/sample.png" id="sample" style="position: absolute; margin-top: 232px; height:210px;margin-left: 640px;">
+
+	  <img src="imgs2-bra/imup.png" id="spup" class="dsphdd" style="position: absolute; height: 325px;margin-left: 640px;">
+	  <img src="imgs2-bra/imdwn.png" id="spdw" class="dsphdd" style="position: absolute; height: 325px;margin-left: 640px;">
+
+	  <img src="imgs2-bra/imup.png" id="dwup" class="dsphdd" style="position: absolute; height: 325px;margin-left: 688px;">
+	  <img src="imgs2-bra/imdwn.png" id="dwdw" class="dsphdd" style="position: absolute; height: 325px;margin-left: 688px;">
+	  <img src="imgs2-bra/imup.png" id="rgup" class="dsphdd" style="position: absolute; height: 325px;margin-left: 735px;">
+	  <img src="imgs2-bra/imdwn.png" id="rgdw" class="dsphdd" style="position: absolute; height: 325px;margin-left: 735px;">
+
+
+	  
+
+	  
+
+	  <button id="step2" onclick="step2();" style="position: absolute;margin-left: 900px;height:375px;margin-top:58px;border: none;background-color: transparent;">
+		  <img src="imgs2-bra/mstd.png" id="mstd" style=" height: 375px;">
+		  <img src="imgs2-bra/mstd0.png" id="mstd0" class="dsphdd" style="height: 375px;">
+	  </button>
+
+	  <img src="imgs2-bra/mup.png" id="mup0" class="dsphdd" style="position: absolute; top: 125px; height: 325px;margin-left: 875px;">
+
+
+
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left:920px;width: 50px;height: 50px;margin-top: 100px;border: none;background-color: transparent;">
+	  </button>
+
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left:668px;width: 40px;height:225px;margin-top: 200px;border: none;background-color: transparent;">
+	  </button>
+
+	  <button id="step5" onclick="step5();" style="position: absolute;margin-left:714px;width: 40px;height: 225px;margin-top: 200px;border: none;background-color: transparent;">
+	  </button>
+
+	  <button id="step6" onclick="step6();" style="position: absolute;margin-left:761px;width: 40px;height: 225px;margin-top: 200px;border:none ;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" class="btn btn-success dsphdd" style="position: absolute;margin-left:0;height: 40px;margin-top: 0;">Run
+	  </button>
+
+	  
+	  <span id="redpr" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 545px;margin-top: 162px;transform: rotate(270deg);width: 55px;"></span>
+	  <span id="redsp" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 660px;margin-top: 90px;transform: rotate(270deg);width: 55px;"></span>
+	  <span id="reddw" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 707px;margin-top: 90px;transform: rotate(270deg);width: 55px;"></span>
+	  <span id="redrg" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 755px;margin-top: 90px;transform: rotate(270deg);width: 55px;"></span>
+
+
+	  <span id="red1" class="red" style="color: #555;padding: 1px;position: absolute;margin-left: 898px;margin-top: 177px;transform: rotate(270deg);width: 55px;"></span>
+	  
+	  
+
+	  
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 50px;margin-top: 440px;">Standard Samples (s10, s9, s8, s7, s6, s5, s4, s3, s2, s1)</span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 575px;margin-top: 440px;">BSA sample | Distilled water | Bradford reagent</span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 975px;margin-top: 440px;">Micropipette</span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+
+
+function step1()
+{
+	
+	
+	if(step==0)
+	{
+	$("#s0").addClass("dsphdd");
+	$("#e1").removeClass("dsphdd");
+	$("#pr0").removeClass("dsphdd");
+	step=1;
+	$("#masteps").text("Now click on micropipette");
+	}
+	else if(step==8)
+	{
+	$("#s1").addClass("dsphdd");
+	$("#e2").removeClass("dsphdd");
+	$("#pr0").removeClass("dsphdd");
+	step=9;
+	}
+	
+}
+
+function step2()
+{
+	if (step==1) 
+	{
+	$("#mstd0").removeClass("dsphdd");
+	$("#mstd").addClass("dsphdd");
+	$("#mup0").removeClass("dsphdd");
+	$("#masteps").text("Now, click on the micropipette wheel to set its first reading at 50 µl to measure the BSA sample (as per the table).");
+	step=2;
+	}
+	
+}
+
+function step3()
+{
+	if (step==2)
+	{
+		$(".red").text("50");
+		$("#red1").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the BSA sample tube.");
+		step=3;
+	}
+	else if (step==4)
+	{
+		$(".red").text("450");
+		$("#red1").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the distilled water tube.");
+		step=5;
+	}
+	else if (step==6)
+	{
+		$(".red").text("2500");
+		$("#red1").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the Bradford reagent tube.");
+		step=7;
+	}
+	else if (step==9)
+	{
+		$(".red").text("100");
+		$("#red1").removeClass("dsphdd");
+		step=10;
+	}
+	else if (step==11)
+	{
+		$(".red").text("400");
+		$("#red1").removeClass("dsphdd");
+		step=12;
+	}
+	else if (step==13)
+	{
+		$(".red").text("2500");
+		$("#red1").removeClass("dsphdd");
+		step=14;
+	}	
+}
+
+
+function step4()
+{
+	if (step==3)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#redsp").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#spdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#spup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#spdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#spup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#redsp").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr0").addClass("dsphdd");
+            $("#pr1").removeClass("dsphdd");
+        }, 2100);
+
+         setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+	
+		step=4;
+		$("#masteps").text("Now, again click on the micropipette wheel to set its reading at 450 µl to measure distilled water (as per the table).");
+	}
+
+	else if (step==10)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#redsp").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#spdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#spup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#spdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#spup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#redsp").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr0").addClass("dsphdd");
+            $("#pr1").removeClass("dsphdd");
+        }, 2100);
+
+         setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+	
+		step=11;
+	}	
+}
+
+
+function step5()
+{
+	if (step==5)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#reddw").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#dwdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#dwup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#dwdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#dwup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#reddw").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr1").addClass("dsphdd");
+            $("#pr2").removeClass("dsphdd");
+        }, 2100);
+
+         setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+
+         $("#masteps").text("Now, again click on the micropipette wheel to set its reading at 2500µl (2.5ml) to measure Bradford reagent (as per the table).");
+	
+		step=6;
+	}
+
+	else if (step==12)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#reddw").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#dwdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#dwup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#dwdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#dwup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#reddw").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr1").addClass("dsphdd");
+            $("#pr2").removeClass("dsphdd");
+        }, 2100);
+
+         setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+	
+		step=13;
+	}	
+}
+
+
+function step6()
+{
+	if (step==7)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#redrg").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#rgdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#rgup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#rgdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#rgup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#redrg").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr2").addClass("dsphdd");
+            $("#o1").removeClass("dsphdd");
+        }, 2100);
+        setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+        setTimeout(function() {
+            $("#o1").addClass("dsphdd");
+            $("#e1").addClass("dsphdd");
+            $("#s1").removeClass("dsphdd");
+        }, 3500);
+	
+		step=8;
+
+		$("#stepx").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the 'Run' button to prepare the rest of the standard samples as per the table.");
+
+	}
+	if (step==14)
+	{
+		$("#red1").addClass("dsphdd");
+		$("#redrg").removeClass("dsphdd");
+		$("#mup0").addClass("dsphdd");
+		$("#rgdw").removeClass("dsphdd");
+		setTimeout(function() {
+            $("#rgup").removeClass("dsphdd");
+        }, 800);
+		setTimeout(function() {
+		    $("#rgdw").addClass("dsphdd");
+		}, 800);
+		setTimeout(function() {
+			$("#rgup").addClass("dsphdd");
+			$("#prup").removeClass("dsphdd");
+			$("#redpr").removeClass("dsphdd");
+			$("#redrg").addClass("dsphdd");
+            
+        }, 1500);
+        setTimeout(function() {
+			$("#prup").addClass("dsphdd");
+            $("#prdw").removeClass("dsphdd");
+            $("#pr2").addClass("dsphdd");
+            $("#o2").removeClass("dsphdd");
+        }, 2100);
+        setTimeout(function() {
+            $("#prdw").addClass("dsphdd");
+            $("#redpr").addClass("dsphdd");
+            $("#mup0").removeClass("dsphdd");
+        }, 2700);
+        setTimeout(function() {
+            $("#o2").addClass("dsphdd");
+            $("#e2").addClass("dsphdd");
+            $("#s2").removeClass("dsphdd");
+        }, 3500);
+	
+		step=15;
+	}	
+}
+
+
+let TestData = [
+	[100, 400, 2500],
+    [150, 350, 2500],
+    [200, 300, 2500],
+    [250, 250, 2500],
+    [300, 200, 2500],
+    [350, 150, 2500],
+    [400, 100, 2500],
+    [450, 50, 2500],
+    [500, 0, 2500]
+];
+
+function stepx() {
+	$("#s0").addClass("dsphdd");
+    for (let i = 0; i < TestData.length; i++) 
+    {
+        (function(i) {
+            setTimeout(function() {
+                // Initial setup
+
+                 setTimeout(() => {
+                $("#s" + (i + 1)).addClass("dsphdd");
+	            $("#pr0").removeClass("dsphdd");
+                // Update first data value
+                $(".red").text(TestData[i][0]);
+                $("#red1").removeClass("dsphdd");
+                // Red step animation
+                $("#red1").addClass("dsphdd"); 
+                $("#e" + (i + 2)).removeClass("dsphdd");
+	            $("#mup0").addClass("dsphdd");
+	            $("#redsp").removeClass("dsphdd");
+                $("#spdw").removeClass("dsphdd");
+                }, 800);
+                
+                
+                setTimeout(() => $("#spup").removeClass("dsphdd"), 1600);
+                setTimeout(() => $("#spdw").addClass("dsphdd"), 1600);
+                setTimeout(() => {
+                    $("#spup").addClass("dsphdd");
+                    $("#prup").removeClass("dsphdd");
+                    $("#redpr").removeClass("dsphdd");
+                    $("#redsp").addClass("dsphdd");
+                }, 2400);
+                setTimeout(() => {
+                    $("#prup").addClass("dsphdd");
+                    $("#prdw").removeClass("dsphdd");
+                    $("#pr0").addClass("dsphdd");
+                    $("#pr1").removeClass("dsphdd");
+                }, 3200);
+                setTimeout(() => {
+                    $("#prdw").addClass("dsphdd");
+                    $("#redpr").addClass("dsphdd");
+                    $("#mup0").removeClass("dsphdd");
+                }, 4000);
+
+                // Update second data value 7100
+
+                setTimeout(() => {
+                $(".red").text(TestData[i][1]);
+                $("#red1").removeClass("dsphdd");
+
+                // Downward step animation
+                $("#red1").addClass("dsphdd");
+                $("#reddw").removeClass("dsphdd");
+                $("#mup0").addClass("dsphdd");
+                $("#dwdw").removeClass("dsphdd");
+                }, 4000);
+
+                setTimeout(() => $("#dwup").removeClass("dsphdd"), 4800);
+                setTimeout(() => $("#dwdw").addClass("dsphdd"), 4800);
+                setTimeout(() => {
+                    $("#dwup").addClass("dsphdd");
+                    $("#prup").removeClass("dsphdd");
+                    $("#redpr").removeClass("dsphdd");
+                    $("#reddw").addClass("dsphdd");
+                }, 5600);
+                setTimeout(() => {
+                    $("#prup").addClass("dsphdd");
+                    $("#prdw").removeClass("dsphdd");
+                    $("#pr1").addClass("dsphdd");
+                    $("#pr2").removeClass("dsphdd");
+                }, 6400);
+                setTimeout(() => {
+                    $("#prdw").addClass("dsphdd");
+                    $("#redpr").addClass("dsphdd");
+                    $("#mup0").removeClass("dsphdd");
+                }, 7200);
+
+
+
+
+                setTimeout(() => {
+                                    // Update third data value
+                $(".red").text(TestData[i][2]);
+                $("#red1").removeClass("dsphdd");
+                // Rightward step animation
+                $("#red1").addClass("dsphdd");
+                $("#redrg").removeClass("dsphdd");
+                $("#mup0").addClass("dsphdd");
+                $("#rgdw").removeClass("dsphdd");
+                }, 7200);
+
+
+                setTimeout(() => $("#rgup").removeClass("dsphdd"), 8000);
+                setTimeout(() => $("#rgdw").addClass("dsphdd"), 8000);
+                setTimeout(() => {
+                    $("#rgup").addClass("dsphdd");
+                    $("#prup").removeClass("dsphdd");
+                    $("#redpr").removeClass("dsphdd");
+                    $("#redrg").addClass("dsphdd");
+                }, 8800);
+                setTimeout(() => {
+                    $("#prup").addClass("dsphdd");
+                    $("#prdw").removeClass("dsphdd");
+                    $("#pr2").addClass("dsphdd");
+                    $("#o" + (i + 2)).removeClass("dsphdd");
+                }, 9600);
+                setTimeout(() => {
+                    $("#prdw").addClass("dsphdd");
+                    $("#redpr").addClass("dsphdd");
+                    $("#mup0").removeClass("dsphdd");
+                }, 10400);
+                setTimeout(() => {
+                    $("#o" + (i + 2)).addClass("dsphdd");
+                    $("#e" + (i + 2)).addClass("dsphdd");
+                    $("#s" + (i + 2)).removeClass("dsphdd");
+                }, 11200);
+
+            }, i * 12000); // Delay in milliseconds (27,200 ms)
+        })(i);
+
+
+        setTimeout(() => {
+                    $("#masteps").text("To proceed further, click on the next step.");
+					$("#nextstep").css("visibility","visible");
+                }, 100000);
+
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

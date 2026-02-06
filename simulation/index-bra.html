@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		#CpHval{
+			border:none;width: 107px;position: absolute;margin-top: 310px;margin-left: 52px;height: 25px;z-index:2;text-align: center;font-size: 21px;line-height: 1;font-family: digital-7;
+		}
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">First step is the preparation of Bradford reagent. Click on Coomassie Brilliant Blue G-250 dye to weight 100mg of it.</p> <a id="nextstep" class="btn btn-success" href="step2-bra.html"> Next Step</a>
+		</div>
+		<div id="main"> 
+      <span type="text" class="counter" id="CpHval">0.0</span>
+	  <img src="imgs1-bra/wt.png" id="wt" style="position: absolute; margin-top: 255px; width: 210px;">
+	  <img src="imgs1-bra/wt2.png" id="wt2" class="dsphdd" style="position: absolute; margin-top: 255px; width: 210px;">
+	  <img src="imgs1-bra/wt3.png" id="wt3" class="dsphdd" style="position: absolute; margin-top: 255px; width: 210px;">
+
+	  <button id="step2" onclick="step2();" style="position: absolute;margin-left:50px;width: 115px;height: 50px;margin-top: 225px;border: none;background-color: transparent;">
+	  </button>
+	  <img src="imgs1-bra/plt3.png" id="plt3" class="dsphdd" style="position: absolute; margin-top: 15px; width: 100px;margin-left: 470px">
+
+	  <img src="imgs1-bra/blupwd1.png" class="dsphdd" id="blupwd1" style="position: absolute;margin-top: 120px;margin-left: 120px;width: 155px;z-index: 5;">
+	
+	  <button id="step1" onclick="step1();" style="position: absolute;margin-left: 250px;width: auto;margin-top: 200px;border: none;">
+	  	<img src="imgs1-bra/blupwd.png" id="blupwd" style="position: absolute;height: 150px;width: auto;" >
+	  </button>
+
+	  <button id="step3" onclick="step3();" style="position: absolute;margin-left: 375px;width: auto;margin-top: 175px;border: none;">
+	  	<img src="imgs1-bra/eth.png" id="eth" style="position: absolute;height: 175px;width: auto;" >
+	  </button>
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left: 435px;width: auto;margin-top: 175px;border: none;">
+	  	<img src="imgs1-bra/acid.png" id="acid" style="position: absolute;height: 175px;width: auto;" >
+	  </button>
+
+	  <img src="imgs1-bra/pordrp.png" class="dsphdd" id="pordrp" style="position: absolute;margin-top: 21px;margin-left: 560px;width: 185px;z-index: 5;">
+
+	  <button id="step5" onclick="step5();" style="position: absolute;margin-left: 510px;width: auto;margin-top: 100px;border: none;">
+	  	<img src="imgs1-bra/flsk1.png" id="flsk1" style="position: absolute;height: 255px;width: auto;" >
+	  	<img src="imgs1-bra/flsk2.png" id="flsk2" class="dsphdd" style="position: absolute;height: 255px;width: auto;" >
+	  	<img src="imgs1-bra/flsk3.png" id="flsk3" class="dsphdd" style="position: absolute;height: 255px;width: auto;" >
+	  	<img src="imgs1-bra/flsk4.png" id="flsk4" class="dsphdd" style="position: absolute;height: 255px;width: auto;" >
+	  	<img src="imgs1-bra/flsk5.png" id="flsk5" class="dsphdd" style="position: absolute;height: 255px;width: auto;" >
+	  </button>
+
+	  <img src="imgs1-bra/flsk6.png" id="flsk6" class="dsphdd" style="position: absolute;height: 115px;width: auto;margin-left: 475px;margin-top: 115px;z-index: 1" >
+
+	  <img src="imgs1-bra/bkr1.png" id="bkr1" style="position: absolute;margin-left: 650px;margin-top: 175px;height: 185px;width: auto;" >
+	  <img src="imgs1-bra/bkr2.png" id="bkr2" class="dsphdd" style="position: absolute;margin-left: 650px;margin-top: 175px;height: 185px;width: auto;" >
+	  <img src="imgs1-bra/bkr3.png" id="bkr3" class="dsphdd" style="position: absolute;margin-left: 650px;margin-top: 175px;height: 185px;width: auto;" >
+	 
+	 <button id="step6" onclick="step6();" style="position: absolute;margin-left: 825px;margin-top: 85px;border: none;background-color: transparent;">
+	  <img src="imgs1-bra/wtr1.png" id="wtr1" style="height: 275px;width: auto;" >
+	 </button>
+	  <img src="imgs1-bra/wtr2.png" id="wtr2" class="dsphdd" style="position: absolute;margin-left: 725px;margin-top: 95px;height: 175px;width: auto;" >
+
+	  
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 345px;margin-top: 360px;">Ethanol <br>(95%) 50ml </span>
+		<span id="acidx" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 435px;margin-top: 360px;">Phosphoric Acid <br>(85%) 100ml </span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+function step1()
+{
+	$("#wt2").removeClass("dsphdd");
+	//$("#oil").addClass("dspblk");
+	$("#CpHval").text("100.00");
+	startCounter();
+	$("#blupwd1").delay(1500).fadeOut();
+	$("#wt1").addClass("dsphdd");
+	$("#blupwd").addClass("dsphdd");
+	$("#blupwd1").addClass("dsphdd");
+	$("#blupwd1").removeClass("dsphdd");
+	$("#blupwd1").addClass("dspblk");
+	$("#masteps").text("Click on the measured dye to pour into the flask.");
+	step=1;
+}
+
+function step2()
+{
+	if (step==1)
+	{
+		$("#wt2").addClass("dsphdd");
+		$("#wt3").removeClass("dsphdd");
+		$("#CpHval").text("0.00");
+		$("#plt3").removeClass("dsphdd");
+		$("#plt3").delay(800).fadeOut();
+		$("#flsk2").removeClass("dsphdd");
+		$("#flsk1").addClass("dsphdd");
+		$("#masteps").text("Click on 50ml-Ethanol to pour into the flask.");
+		step=2;
+	}	
+}
+
+
+function step3()
+{
+	if (step==2)
+	{
+		$("#step3").addClass("dsphdd");
+		$("#pordrp").removeClass("dsphdd");
+		$("#pordrp").delay(800).fadeOut();
+		$("#flsk3").removeClass("dsphdd");
+		$("#flsk2").addClass("dsphdd");
+		$("#eths1").addClass("dsphdd");
+		// $("#flsk2").delay(300).addClass("dsphdd");
+		$("#masteps").text("Click on Phosphoric Acid to pour into the flask");
+		step=3;
+	}	
+}
+
+function step4()
+{
+	if (step==3)
+	{
+		$("#step4").addClass("dsphdd");
+		$("#pordrp").addClass("dspblk");
+		$("#pordrp").fadeIn();
+		$("#pordrp").delay(800).fadeOut();
+		$("#flsk4").removeClass("dsphdd");
+		$("#flsk3").addClass("dsphdd");
+		$("#acidx").addClass("dsphdd");
+		// $("#flsk2").delay(300).addClass("dsphdd");
+		$("#masteps").text("Click on flask to shake it well.");
+		step=4;
+	}	
+}
+
+function step5()
+{
+	if (step==4)
+	{
+		// $("#flsk5").removeClass("dsphdd");
+		
+		step=5;
+		$('#flsk4').addClass('mixx');
+		setTimeout(function(){
+		    $('#flsk4').removeClass('mixx');
+		},2000);
+		$("#flsk4").delay(2000).fadeOut();
+		setTimeout(function() {
+            $("#flsk5").removeClass("dsphdd").fadeIn();
+        }, 1800);
+
+		$("#masteps").text("Click on flask to pour into the beaker.");
+	}
+
+	else if (step==5)
+	{
+		step=6;
+		
+		$('#flsk4').addClass('mixx');
+		setTimeout(function(){
+		    $('#flsk4').removeClass('mixx');
+		},2000);
+		$("#flsk4").delay(2000).fadeOut();
+		setTimeout(function() {
+            $("#flsk5").removeClass("dsphdd").fadeIn();
+        }, 1800);
+
+		$("#masteps").text("Click on distilled water bottle to pour into the beaker to make 1L reagent.");
+		
+	}
+
+	if (step==6)
+	{
+		step=7;
+		$("#step5").addClass("dsphdd");
+		$("#flsk6").removeClass("dsphdd");
+		$("#bkr2").removeClass("dsphdd");
+		$("#flsk6").delay(800).fadeOut();
+		$("#bkr1").addClass("dsphdd");
+		
+	}
+}
+
+function step6()
+{
+	if (step==7)
+	{
+		$("#step6").addClass("dsphdd");
+		$("#wtr2").removeClass("dsphdd");
+		$("#wtr2").delay(800).fadeOut();
+
+		$("#bkr3").removeClass("dsphdd");
+		$("#bkr2").addClass("dsphdd");
+		$("#masteps").text("1L Bradford reagent is prepared for further use. Now click on next step to continue.");
+		$("#nextstep").css("visibility","visible");
+		
+	}	
+}
+
+
+
+
+function startCounter(){
+	$('.counter').each(function (index) {
+		var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	        duration: 2000,
+	        easing: 'swing',
+	        step: function (now) {
+	            $(this).text(parseFloat(now).toFixed(size));
+	        }
+	    });
+	});
+}	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

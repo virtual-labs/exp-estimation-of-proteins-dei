@@ -1,0 +1,75 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which aromatic amino acids are primarily responsible for protein absorbance at 280 nm?",
+      "answers": {
+        "a": "Glycine and Alanine",
+        "b": "Tyrosine and Tryptophan",
+        "c": "Lysine and Arginine",
+        "d": "Methionine and Cysteine"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "The Bradford assay primarily relies on which dye to measure protein concentration.",
+      "answers": {
+        "a": "Coomassie Brilliant Blue G-250",
+        "b": "Ethidium Bromide",
+        "c": "Crystal Violet",
+        "d": "Methylene Blue"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "What is the purpose of the Folin–Ciocalteu reagent in the Lowry assay?",
+      "answers": {
+        "a": "To stabilize the protein structure",
+        "b": "To reduce copper ions",
+        "c": "To produce a blue color indicating protein presence",
+        "d": "To precipitate proteins"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "Which equation represents the Beer-Lambert Law?",
+      "answers": {
+        "a": "A=ϵcl",
+        "b": "A=cl",
+        "c": "A=ϵ+c+l",
+        "d": "A=ϵc+l"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "To prepare 1 liter of Coomassie Brilliant Blue G-250 reagent,what initial solvent is used to dissolve the dye?",
+      "answers": {
+        "a": "Water",
+        "b": "95% Ethanol",
+        "c": "Acetone",
+        "d": "Methanol"
+      },
+      "correctAnswer": "b"
+    },
+    {
+      "question": "What methods can be used to remove suspended particles from turbid protein samples before measurement?",
+      "answers": {
+        "a": "Filtration and centrifugation",
+        "b": "Boiling and cooling",
+        "c": "Adding detergents",
+        "d": "Freezing and thawing"
+      },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "Given the standard curve equation y=0.02x+0.1 and an absorbance reading of 0.5, what is the concentration of the unknown protein sample?",
+      "answers": {
+        "a": "10 µg/ml",
+        "b": "20 µg/ml",
+        "c": "30 µg/ml",
+        "d": "40 µg/ml"
+      },
+      "correctAnswer": "b"
+    }
+  ]
+}
