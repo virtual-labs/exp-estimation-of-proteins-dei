@@ -25,20 +25,20 @@
 <div class="row zero">
     <div id="main"> 
         <div id="myhead">
-            <p id="masteps">This calculator uses a standard curve plot to calculate the concentration of unknown samples. Check sample data table (<a href="table.html" target="_blank">Open Table</a>)</p>
-            <a id="nextstep" class="btn btn-success dsphdd" href="step2.html">Next Step</a>
+            <p id="masteps">This calculator uses a standard curve plot to calculate the concentration of unknown samples. Check sample data table (<a href="table-bra.html" target="_blank">Open Table</a>)</p>
+            <a id="nextstep" class="btn btn-success dsphdd" href="step2-bra.html">Next Step</a>
         </div>
         <hr>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 zero" style="border-right: 1px solid #aaa;padding-right: 15px">
             <div class="form-group">
-                <h5 style="text-align: left;">Enter absorbance reading at 562nm and known BSA Concentration (µg/ml)</h5>
+                <h5 style="text-align: left;">Enter absorbance reading at 595 nm and known BSA Concentration (µg/ml)</h5>
                 <div id="inputContainer">
                     <div class="row mb-2 zero">
                         <div class="col">
                             <input type="number" class="form-control" placeholder="BSA Concentration (µg/ml)" required>
                         </div>
                         <div class="col">
-                            <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 562nm" required>
+                            <input type="number" step="0.001" class="form-control" placeholder="Absorbance at 595 nm" required>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <hr>
             </div>
             <div class="form-group" style="margin-top: 50px;">
-                <h5 style="text-align: left;">Enter unknown sample's absorbance reading at 562nm</h5>
+                <h5 style="text-align: left;">Enter unknown sample's absorbance reading at 595 nm</h5>
                 <input type="number" step="0.001" class="form-control" placeholder="Unknown sample" style="width: 100%;">
             </div>
             <div class="form-group mt-2">
@@ -93,7 +93,7 @@
         input2.type = 'number';
         input2.step = '0.001';
         input2.classList.add('form-control');
-        input2.placeholder = 'Absorbance at 562nm';
+        input2.placeholder = 'Absorbance at 595 nm';
         input2.required = true;
         col2.appendChild(input2);
 
@@ -163,7 +163,7 @@
                 labels: concentrations,
                 datasets: [
                     {
-                        label: 'Absorbance at 562nm',
+                        label: 'Absorbance at 595 nm',
                         data: absorbances,
                         borderColor: 'rgba(75, 192, 192, 1)',
                         backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -191,7 +191,7 @@
                     y: {
                         title: {
                             display: true,
-                            text: 'Absorbance at 562nm'
+                            text: 'Absorbance at 595 nm'
                         }
                     }
                 }

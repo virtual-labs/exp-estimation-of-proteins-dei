@@ -68,14 +68,14 @@
 <div class="row zero">
 	  <div id="leftPanel">
 			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
-			<p id="masteps">In this step, we will take the readings of the previously prepared standard samples in the same way as the test or blank sample. To do this, click on the Micropipette.</p> <a id="nextstep" class="btn btn-success" href="calculator.html"> Next Step</a>
+			<p id="masteps">In this step, we will take the readings of the previously prepared standard samples in the same way as the test or blank sample. To do this, click on the Micropipette.</p> <a id="nextstep" class="btn btn-success" href="calculator-law.html"> Next Step</a>
 		</div>
 		<div id="main"> 
       <button class="btn btn-success dsphdd" id="record" onclick="record();" style="padding: 10px;position: absolute;margin-top: 10px;margin-left: 10px;width: 100px;">Run</button>
 
-	  <img src="imgs3/msrc.png" id="msrc" style="position: absolute; margin-top: 180px; width: 400px;">
-	  <img src="imgs3/msro.png" id="msro" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
-	  <img src="imgs3/msrb.png" id="msrb" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs3-law/msrc.png" id="msrc" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs3-law/msro.png" id="msro" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
+	  <img src="imgs3-law/msrb.png" id="msrb" class="dsphdd" style="position: absolute; margin-top: 180px; width: 400px;">
 	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 215px;"></span>
 
 	  <button id="step4" onclick="step4();" style="position: absolute;margin-left:15px;width: 135px;height: 125px;margin-top: 260px;border:none; ;background-color: transparent;">
@@ -92,40 +92,40 @@
 	  
 
 	  <button id="step3" onclick="step3();" style="position: absolute; margin-left:420px;margin-top: 211px;border:none ;background-color: transparent;">
-	  		<img src="imgs3/e0.png" id="e0"  style="height:235px;">
-	  		<img src="imgs3/e1.png" id="e1" class="dsphdd"  style="height:235px;">
-	  		<img src="imgs3/e2.png" id="e2" class="dsphdd"  style="height:235px;">
-	  		<img src="imgs3/e3.png" id="e3" class="dsphdd" style="height:235px;">
-	  		<img src="imgs3/e4.png" id="e4" class="dsphdd" style="height:235px;">
-	  		<img src="imgs3/e5.png" id="e5" class="dsphdd" style="height:235px;">
+	  		<img src="imgs3-law/e0.png" id="e0"  style="height:235px;">
+	  		<img src="imgs3-law/e1.png" id="e1" class="dsphdd"  style="height:235px;">
+	  		<img src="imgs3-law/e2.png" id="e2" class="dsphdd"  style="height:235px;">
+	  		<img src="imgs3-law/e3.png" id="e3" class="dsphdd" style="height:235px;">
+	  		<img src="imgs3-law/e4.png" id="e4" class="dsphdd" style="height:235px;">
+	  		<img src="imgs3-law/e5.png" id="e5" class="dsphdd" style="height:235px;">
 
 	  </button>
 
-	  <img src="imgs3/inup.png" id="e5up" class="dsphdd" style="position: absolute; margin-left:442px;margin-top: 0px; height: 300px;">
-	  <img src="imgs3/indw.png" id="e5dw" class="dsphdd" style="position: absolute; margin-left:442px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="e5up" class="dsphdd" style="position: absolute; margin-left:442px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="e5dw" class="dsphdd" style="position: absolute; margin-left:442px;margin-top: 0px; height: 300px;">
 	  <span id="e5R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 458px;margin-top: 77px;transform: rotate(270deg);width: 55px;">0.000</span>
-	  <img src="imgs3/inup.png" id="e4up" class="dsphdd" style="position: absolute; margin-left:495px;margin-top: 0px; height: 300px;">
-	  <img src="imgs3/indw.png" id="e4dw" class="dsphdd" style="position: absolute; margin-left:495px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="e4up" class="dsphdd" style="position: absolute; margin-left:495px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="e4dw" class="dsphdd" style="position: absolute; margin-left:495px;margin-top: 0px; height: 300px;">
 	  <span id="e4R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 512px;margin-top: 77px;transform: rotate(270deg);width: 55px;">0.000</span>
-	  <img src="imgs3/inup.png" id="e3up" class="dsphdd" style="position: absolute; margin-left:551px;margin-top: 0px; height: 300px;">
-	  <img src="imgs3/indw.png" id="e3dw" class="dsphdd" style="position: absolute; margin-left:551px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="e3up" class="dsphdd" style="position: absolute; margin-left:551px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="e3dw" class="dsphdd" style="position: absolute; margin-left:551px;margin-top: 0px; height: 300px;">
 	  <span id="e3R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 568px;margin-top: 77px;transform: rotate(270deg);width: 55px;">0.000</span>
-	  <img src="imgs3/inup.png" id="e2up" class="dsphdd" style="position: absolute; margin-left:605px;margin-top: 0px; height: 300px;">
-	  <img src="imgs3/indw.png" id="e2dw" class="dsphdd" style="position: absolute; margin-left:605px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="e2up" class="dsphdd" style="position: absolute; margin-left:605px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="e2dw" class="dsphdd" style="position: absolute; margin-left:605px;margin-top: 0px; height: 300px;">
 	  <span id="e2R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 622px;margin-top: 77px;transform: rotate(270deg);width: 55px;">0.000</span>
-	  <img src="imgs3/inup.png" id="e1up" class="dsphdd" style="position: absolute; margin-left:662px;margin-top: 0px; height: 300px;">
-	  <img src="imgs3/indw.png" id="e1dw" class="dsphdd" style="position: absolute; margin-left:662px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="e1up" class="dsphdd" style="position: absolute; margin-left:662px;margin-top: 0px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="e1dw" class="dsphdd" style="position: absolute; margin-left:662px;margin-top: 0px; height: 300px;">
 	  <span id="e1R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 678px;margin-top: 77px;transform: rotate(270deg);width: 55px;">0.000</span>
 
 
 	  
 	  <button id="step5" onclick="step5();" style="position: absolute;position: absolute; margin-left:820px;margin-top: 300px; height: 125px;border:none;background-color: transparent;">
-		  	<img src="imgs3/p0.png" id="p0" style="height: 125px;">
-		  	<img src="imgs3/p1.png" id="p1" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-law/p0.png" id="p0" style="height: 125px;">
+		  	<img src="imgs3-law/p1.png" id="p1" class="dsphdd" style="height: 125px;">
 	  </button>
 
-	  <img src="imgs3/inup.png" id="pXup" class="dsphdd" style="position: absolute; margin-left:792px;margin-top: 95px; height: 300px;">
-	  <img src="imgs3/indw.png" id="pXdw" class="dsphdd" style="position: absolute; margin-left:792px;margin-top: 95px; height: 300px;">
+	  <img src="imgs3-law/inup.png" id="pXup" class="dsphdd" style="position: absolute; margin-left:792px;margin-top: 95px; height: 300px;">
+	  <img src="imgs3-law/indw.png" id="pXdw" class="dsphdd" style="position: absolute; margin-left:792px;margin-top: 95px; height: 300px;">
 	  <span id="pXR" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 808px;margin-top: 175px;transform: rotate(270deg);width: 55px;">0.000</span>
 
 	  
@@ -136,11 +136,11 @@
 	  
 	  
 	  <button id="step1" onclick="step1();" style="position: absolute; margin-left:895px;margin-top: 100px; height: 325px;border: none;background: transparent;">
-	  	<img src="imgs3/mstd.png" id="mstd" style="height: 325px;">
-	  	<img src="imgs3/mstd0.png" id="mstd0" class="dsphdd" style="height: 325px;">
+	  	<img src="imgs3-law/mstd.png" id="mstd" style="height: 325px;">
+	  	<img src="imgs3-law/mstd0.png" id="mstd0" class="dsphdd" style="height: 325px;">
 	  </button>
 
-	  <img src="imgs3/mup.png" id="mupx" class="dsphdd" style="position: absolute; margin-left:860px;top: 150px; height: 300px;">
+	  <img src="imgs3-law/mup.png" id="mupx" class="dsphdd" style="position: absolute; margin-left:860px;top: 150px; height: 300px;">
 	  <span id="p0R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 879px;margin-top: 190px;transform: rotate(270deg);width: 55px;">0.000</span>
 	  <button id="step2" onclick="step2();" style="position: absolute; margin-left:890px;top: 175px; height: 55px;width: 55px;border:none;background-color: transparent;">
 	  </button>

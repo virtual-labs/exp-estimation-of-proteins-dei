@@ -68,14 +68,14 @@
 <div class="row zero">
 	<div id="leftPanel">
 		<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
-		<p id="masteps">In this step, the same procedure is repeated to measure the absorbance values of the prepared samples at 562 nm. To do this, simply click the Run button.</p> <a id="nextstep" class="btn btn-success" href="calculator.html"> Next Step</a>
+		<p id="masteps">In this step, the same procedure is repeated to measure the absorbance values of the prepared samples at 562 nm. To do this, simply click the Run button.</p> <a id="nextstep" class="btn btn-success" href="calculator-bca.html"> Next Step</a>
 	</div>
 	<div id="main"> 
 	  <button id="stepx" onclick="stepx();" class="btn btn-success" style="position: absolute;height: 35px;padding: 10px;width: 100px;">Run
 	  </button>
-	  <img src="imgs3/msrc.png" id="msrc" style="position: absolute; top: 150px; width: 400px;">
-	  <img src="imgs3/msro.png" id="msro" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
-	  <img src="imgs3/msrt.png" id="msrt" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
+	  <img src="imgs3-bca/msrc.png" id="msrc" style="position: absolute; top: 150px; width: 400px;">
+	  <img src="imgs3-bca/msro.png" id="msro" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
+	  <img src="imgs3-bca/msrt.png" id="msrt" class="dsphdd" style="position: absolute; top: 150px; width: 400px;">
 	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 220px;margin-top: 137px;"></span>
 
 	  <button id="step3" onclick="step3();" style="position: absolute;margin-left:15px;width: 135px;height: 125px;margin-top: 110px;border: none;background-color: transparent;">
@@ -86,43 +86,43 @@
 	  </button>
 
 	  <button id="step1" onclick="step1();" style="position: absolute; margin-left: 225px;top: 440px;border:none ;background-color: transparent;">
-	  		<img src="imgs3/sample.png" id="s0" style="height: 100px;">
-			<img src="imgs3/s1.png" id="s1" class="dsphdd" style="height: 100px;">
-			<img src="imgs3/s2.png" id="s2" class="dsphdd" style="height: 100px;">
-			<img src="imgs3/s3.png" id="s3" class="dsphdd" style="height: 100px;">
-			<img src="imgs3/s4.png" id="s4" class="dsphdd" style="height: 100px;">
-			<img src="imgs3/s5.png" id="s5" class="dsphdd" style="height: 100px;">
+	  		<img src="imgs3-bca/sample.png" id="s0" style="height: 100px;">
+			<img src="imgs3-bca/s1.png" id="s1" class="dsphdd" style="height: 100px;">
+			<img src="imgs3-bca/s2.png" id="s2" class="dsphdd" style="height: 100px;">
+			<img src="imgs3-bca/s3.png" id="s3" class="dsphdd" style="height: 100px;">
+			<img src="imgs3-bca/s4.png" id="s4" class="dsphdd" style="height: 100px;">
+			<img src="imgs3-bca/s5.png" id="s5" class="dsphdd" style="height: 100px;">
 	  </button>
 
-	  <img src="imgs3/pr0.png" id="pr0" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
-	  <img src="imgs3/pr1.png" id="pr1" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
-	  <img src="imgs3/pr2.png" id="pr2" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
-	  <img src="imgs3/pr3.png" id="pr3" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
-	  <img src="imgs3/pr4.png" id="pr4" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
-	  <img src="imgs3/pr5.png" id="pr5" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr0.png" id="pr0" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr1.png" id="pr1" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr2.png" id="pr2" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr3.png" id="pr3" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr4.png" id="pr4" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
+	  <img src="imgs3-bca/pr5.png" id="pr5" class="dsphdd" style="position: absolute; margin-left:650px;top: 400px; height: 135px;">
 	  
 	  <button id="step4" onclick="step4();" style="position: absolute;position: absolute; margin-left:750px;top: 417px; height: 125px;border:none;background-color: transparent;">
-		  	<img src="imgs3/p0.png" id="p0"  style="height: 125px;">
-		  	<img src="imgs3/p1.png" id="p1" class="dsphdd" style="height: 125px;">
-		  	<img src="imgs3/p2.png" id="p2" class="dsphdd" style="height: 125px;">
-		  	<img src="imgs3/p3.png" id="p3" class="dsphdd" style="height: 125px;">
-		  	<img src="imgs3/p4.png" id="p4" class="dsphdd" style="height: 125px;">
-		  	<img src="imgs3/p5.png" id="p5" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-bca/p0.png" id="p0"  style="height: 125px;">
+		  	<img src="imgs3-bca/p1.png" id="p1" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-bca/p2.png" id="p2" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-bca/p3.png" id="p3" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-bca/p4.png" id="p4" class="dsphdd" style="height: 125px;">
+		  	<img src="imgs3-bca/p5.png" id="p5" class="dsphdd" style="height: 125px;">
 	  </button>
 
 
-	  <img src="imgs3/inup.png" id="tnup" class="dsphdd" style="position: absolute; margin-left:624px;top: 223px; height: 300px;">
-	  <img src="imgs3/indw.png" id="tndw" class="dsphdd" style="position: absolute; margin-left:624px;top: 223px; height: 300px;">
+	  <img src="imgs3-bca/inup.png" id="tnup" class="dsphdd" style="position: absolute; margin-left:624px;top: 223px; height: 300px;">
+	  <img src="imgs3-bca/indw.png" id="tndw" class="dsphdd" style="position: absolute; margin-left:624px;top: 223px; height: 300px;">
 
 
-	  <img src="imgs3/inup.png" id="pnup" class="dsphdd" style="position: absolute; margin-left:725px;top: 212px; height: 300px;">
-	  <img src="imgs3/indw.png" id="pndw" class="dsphdd" style="position: absolute; margin-left:725px;top: 212px; height: 300px;">
+	  <img src="imgs3-bca/inup.png" id="pnup" class="dsphdd" style="position: absolute; margin-left:725px;top: 212px; height: 300px;">
+	  <img src="imgs3-bca/indw.png" id="pndw" class="dsphdd" style="position: absolute; margin-left:725px;top: 212px; height: 300px;">
 
 	  
 	  
 	  <button id="step2" onclick="step2();" style="position: absolute; margin-left:850px;top: 55px; height: 325px;border: none;">
-	  	<img src="imgs3/mstd.png" id="mstd" style="position: absolute; height: 325px;">
-	  	<img src="imgs3/mstd0.png" id="mstd0" class="dsphdd" style="position: absolute; height: 325px;">
+	  	<img src="imgs3-bca/mstd.png" id="mstd" style="position: absolute; height: 325px;">
+	  	<img src="imgs3-bca/mstd0.png" id="mstd0" class="dsphdd" style="position: absolute; height: 325px;">
 	  </button>
 
 	 
