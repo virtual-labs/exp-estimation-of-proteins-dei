@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		@font-face{
+		 font-family:'digital-7';
+		 src: url('css/digital-7.ttf');
+		}
+
+		#nextstep{
+			visibility: hidden;
+		}
+		#CpHval{
+			border:none;width: 107px;position: absolute;margin-top: 310px;margin-left: 52px;height: 25px;z-index:2;text-align: center;font-size: 21px;line-height: 1;font-family: digital-7;
+		}
+		.mixx
+		{
+			animation: animName 2s linear infinite;
+		}
+
+		@keyframes animName {
+		 0%{
+		    transform: rotate(-8deg);
+		   }
+		10%{
+		    transform: rotate(8deg);
+		   }
+		20%{
+		    transform: rotate(-8deg);
+		   }
+		30%{
+		    transform: rotate(8deg);
+		   }
+		40%{
+		    transform: rotate(-8deg);
+		   }
+		50%{
+		    transform: rotate(8deg);
+		   }
+		60%{
+		    transform: rotate(-8deg);
+		   }
+		70%{
+		    transform: rotate(8deg);
+		   }
+		80%{
+		    transform: rotate(-8deg);
+		   }
+		90%{
+		    transform: rotate(8deg);
+		   }
+		100%{
+		    transform: rotate(-8deg);
+		   }
+		}
+	</style>
+    
+</head>
+<body>
+
+<div class="row zero">
+		<div id="leftPanel">
+			<button onclick=location.reload(); class="btn btn-warning" style="width:225px;margin-bottom: 15px;">Reset</button>
+			<p id="masteps">Next step is to measure the absorbance of Blank and Test sample at 660nm using spectrophotometer. For this click on Micropipette.</p> <a id="nextstep" class="btn btn-success" href="step3-law.html"> Next Step</a>
+		</div>
+		<div id="main">
+	  <img src="imgs2-law/msrc.png" id="msrc" style="position: absolute; margin-top: 230px; width: 400px;">
+	  <img src="imgs2-law/msro.png" id="msro" class="dsphdd" style="position: absolute; margin-top: 230px; width: 400px;">
+	  <img src="imgs2-law/msrb.png" id="msrb" class="dsphdd" style="position: absolute; margin-top: 230px; width: 400px;">
+	  <span id="red" style="color: #555;padding: 5px;position: absolute;margin-left: 230px;margin-top: 265px;"></span>
+
+	  <button id="step4" onclick="step4();" style="position: absolute;margin-left:15px;width: 135px;height: 125px;margin-top: 310px;border:none; ;background-color: transparent;">
+	  </button>
+	  <button id="step6" onclick="step6();" style="position: absolute;margin-left:218px;width: 68px;height: 25px;margin-top: 375px;border:none; ;background-color: transparent;">
+	  </button>
+	  <button id="stepx" onclick="stepx();" style="position: absolute;margin-left:288px;width: 68px;height: 25px;margin-top: 375px;border:none; ;background-color: transparent;">
+	  </button>
+	  <button id="step7" onclick="step7();" style="position: absolute;margin-left:218px;width: 140px;height: 25px;margin-top: 405px;border:none; ;background-color: transparent;">
+	  </button>
+
+	  <button id="step3" onclick="step3();" style="position: absolute; margin-left:450px;margin-top: 210px;border:none ;background-color: transparent;">
+	  		<img src="imgs2-law/e1.png" id="e1"  style="width: 250px;">
+	  		<img src="imgs2-law/e2.png" id="e2" class="dsphdd"  style="width: 250px;">
+	  		<img src="imgs2-law/e3.png" id="e3" class="dsphdd" style="width: 250px;">
+	  </button>
+
+	  
+	  <button id="step5" onclick="step5();" style="position: absolute;position: absolute; margin-left:750px;margin-top: 345px; height: 125px;border:none;background-color: transparent;">
+		  	<img src="imgs2-law/p0.png" id="p0" style="height: 125px;">
+		  	<img src="imgs2-law/p1.png" id="p1" class="dsphdd" style="height: 125px;">
+		    <img src="imgs2-law/p2.png" id="p2" class="dsphdd" style="height: 125px;">
+	  </button>
+
+
+	  <img src="imgs2-law/inup.png" id="p1up" class="dsphdd" style="position: absolute; margin-left:475px;margin-top: 0px; height: 300px;">
+	  <img src="imgs2-law/indw.png" id="p1dw" class="dsphdd" style="position: absolute; margin-left:475px;margin-top: 0px; height: 300px;">
+	  <span id="p1R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 492px;margin-top: 85px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <img src="imgs2-law/inup.png" id="p2up" class="dsphdd" style="position: absolute; margin-left:535px;margin-top: 0px; height: 300px;">
+	  <img src="imgs2-law/indw.png" id="p2dw" class="dsphdd" style="position: absolute; margin-left:535px;margin-top: 0px; height: 300px;">
+	  <span id="p2R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 552px;margin-top: 85px;transform: rotate(270deg);width: 55px;">0.000</span>
+	 <img src="imgs2-law/inup.png" id="p3up" class="dsphdd" style="position: absolute; margin-left:725px;margin-top: 140px; height: 300px;">
+	  <img src="imgs2-law/indw.png" id="p3dw" class="dsphdd" style="position: absolute; margin-left:725px;margin-top: 140px; height: 300px;">
+	  <span id="p3R" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 742px;margin-top: 225px;transform: rotate(270deg);width: 55px;">0.000</span>
+
+
+
+	  
+	  
+	  <button id="step1" onclick="step1();" style="position: absolute; margin-left:895px;top: 35px; height: 325px;border: none;">
+	  	<img src="imgs2-law/mstd.png" id="mstd" style="position: absolute; height: 325px;">
+	  	<img src="imgs2-law/mstd0.png" id="mstd0" class="dsphdd" style="position: absolute; height: 325px;">
+	  </button>
+
+	  <img src="imgs2-law/mup.png" id="mupx" class="dsphdd" style="position: absolute; margin-left:820px;top: 150px; height: 300px;">
+	  <span id="pXR" class="red dsphdd" style="color: #555;padding: 1px;position: absolute;margin-left: 839px;margin-top: 192px;transform: rotate(270deg);width: 55px;">0.000</span>
+	  <button id="step2" onclick="step2();" style="position: absolute; margin-left:845px;top: 175px; height: 55px;width: 55px;border:none;background-color: transparent;">
+	  </button>
+	  
+	  	<span id="eths1" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 145px;margin-top: 480px;">Spectrophotometer</span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 475px;margin-top: 480px;">Test Sample | Blank Sample </span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 745px;margin-top: 480px;">Cuvette </span>
+		<span id="acid" style="background-color: #555;color: #fff;padding: 5px;position: absolute;margin-left: 950px;margin-top: 480px;">Micropipette</span>
+
+	  
+    </div>
+</div>
+
+
+<script>
+
+var step=0;
+
+
+
+function step1()
+{
+	$("#red").text(" ");
+	if (step==0)
+	{
+		$("#mstd").addClass("dsphdd");
+		$("#mstd0").removeClass("dsphdd");
+		$("#mupx").removeClass("dsphdd");
+		$("#masteps").text("Now click on micropipette wheel to set its reading to 1ml.");
+		step=1;
+	}
+	if (step==7)
+	{
+		$("#mstd").addClass("dsphdd");
+		$("#mstd0").removeClass("dsphdd");
+		$("#mupx").removeClass("dsphdd");
+		$("#p0").removeClass("dsphdd");
+		$("#masteps").text("Set the micropipette's reading to 1 ml by clicking on its wheel.");
+		step=8;
+	}	
+}
+
+function step2()
+{
+	
+	if (step==1)
+	{
+		$(".red").text("1.00");
+		$("#pXR").removeClass("dsphdd");
+		$("#masteps").text("Now click on Blank Sample tube to place 1ml of blank sample into cuvette.");
+		step=2;
+	}
+	if (step==8)
+	{
+		$(".red").text("1.00");
+		$("#pXR").removeClass("dsphdd");
+		$("#masteps").text("Now click on Test Sample tube to place 1ml of testing sample into cuvette.");
+		step=9;
+	}	
+}
+
+function step3()
+{
+	
+	if (step==2)
+	{	
+		$("#mupx").addClass("dsphdd");
+		$("#pXR").addClass("dsphdd");
+		$("#p2dw").removeClass("dsphdd");
+		$("#p2R").removeClass("dsphdd");
+		setTimeout(function() {
+	        $("#p2dw").addClass("dsphdd");
+	        $("#p2up").removeClass("dsphdd");
+	        $("#e1").addClass("dsphdd");
+	        $("#e2").removeClass("dsphdd");
+        }, 800);
+        setTimeout(function() {
+	        $("#p2up").addClass("dsphdd");
+	        $("#p2R").addClass("dsphdd");
+	        $("#p3up").removeClass("dsphdd");
+	        $("#p3R").removeClass("dsphdd");
+        }, 1600);
+        setTimeout(function() {
+	        $("#p3up").addClass("dsphdd");
+	        $("#p3dw").removeClass("dsphdd");
+	        $("#p0").addClass("dsphdd");
+	        $("#p1").removeClass("dsphdd");
+        }, 2400);
+        setTimeout(function() {
+	        $("#p3R").addClass("dsphdd");
+	        $("#p3dw").addClass("dsphdd");
+	        $("#mstd0").addClass("dsphdd");
+	        $("#mstd").removeClass("dsphdd");
+	        $("#masteps").text("Now click on Spectrophotometer lid to open it.");
+        }, 3600);
+		step=3;
+	}
+
+
+	else if (step==9)
+	{	
+		$("#mupx").addClass("dsphdd");
+		$("#pXR").addClass("dsphdd");
+		$("#p1dw").removeClass("dsphdd");
+		$("#p1R").removeClass("dsphdd");
+		setTimeout(function() {
+	        $("#p1dw").addClass("dsphdd");
+	        $("#p1up").removeClass("dsphdd");
+	        $("#e2").addClass("dsphdd");
+	        $("#e3").removeClass("dsphdd");
+        }, 800);
+        setTimeout(function() {
+	        $("#p1up").addClass("dsphdd");
+	        $("#p1R").addClass("dsphdd");
+	        $("#p3up").removeClass("dsphdd");
+	        $("#p3R").removeClass("dsphdd");
+        }, 1600);
+        setTimeout(function() {
+	        $("#p3up").addClass("dsphdd");
+	        $("#p3dw").removeClass("dsphdd");
+	        $("#p0").addClass("dsphdd");
+	        $("#p2").removeClass("dsphdd");
+        }, 2400);
+        setTimeout(function() {
+	        $("#p3R").addClass("dsphdd");
+	        $("#p3dw").addClass("dsphdd");
+	        $("#mstd0").addClass("dsphdd");
+	        $("#mstd").removeClass("dsphdd");
+	        $("#masteps").text("Now click on Spectrophotometer lid to open it.");
+        }, 3600);
+		step=10;
+	}
+
+
+
+}
+
+function step4()
+{
+	
+	if (step==3)
+	{
+		$("#msrc").addClass("dsphdd");
+		$("#msro").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the cuvette to place it into the spectrophotometer.");
+		step=4;
+	}
+	if (step==10)
+	{
+		$("#msrc").addClass("dsphdd");
+		$("#msro").removeClass("dsphdd");
+		$("#masteps").text("Now, click on the cuvette to place it into the spectrophotometer.");
+		step=11;
+	}
+}
+
+function step5()
+{
+	
+	if (step==4)
+	{
+		$("#p1").addClass("dsphdd");
+		$("#msro").addClass("dsphdd");
+		$("#msrb").removeClass("dsphdd");
+		setTimeout(function() {
+	        $("#msrb").addClass("dsphdd");
+	        $("#msrc").removeClass("dsphdd");
+	        $("#masteps").text("Now, click on the 'Blank' button on the spectrophotometer to set it on the blank sample mode.");
+        }, 800);
+     step=5;
+	}
+	if (step==11)
+	{
+		$("#p2").addClass("dsphdd");
+		$("#msro").addClass("dsphdd");
+		$("#msrb").removeClass("dsphdd");
+		setTimeout(function() {
+	        $("#msrb").addClass("dsphdd");
+	        $("#msrc").removeClass("dsphdd");
+	        $("#masteps").text("Now, click on the 'Test' button on the spectrophotometer to set it on the test sample mode.");
+        }, 800);
+     step=12;
+	}
+}
+
+function step6()
+{
+	
+	if (step==5)
+	{
+		$("#red").text("B: ");
+		$("#masteps").text("Now, click on the 'A660' button on the spectrophotometer to take the reading at 660 nm.");
+		step=6;
+	}
+
+}
+
+function stepx()
+{
+	if (step==12)
+	{
+		$("#red").text("T: ");
+		$("#masteps").text("Now, click on the 'A660' button on the spectrophotometer to take the reading at 660 nm.");
+		step=13;
+	}
+}
+
+
+function step7()
+{
+	
+	if (step==6)
+	{
+		$("#red").text("B: 0.00");
+		$("#masteps").text("Next, we need to calculate the test sample reading. To begin, click on the micropipette.");
+		step=7;
+	}
+	if (step==13)
+	{
+		$("#red").text("T: 0.32");
+		$("#masteps").text("Now, Click on the 'NextStep' button to proceed with the next steps.");
+		$("#nextstep").css("visibility", "visible");
+		step=14;
+	}
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

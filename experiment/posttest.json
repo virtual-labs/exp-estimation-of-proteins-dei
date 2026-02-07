@@ -2,38 +2,64 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Why is the UV absorbance method suitable for protein quantitation?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It detects all types of biomolecules.",
+        "b": "It specifically measures the presence of aromatic amino acids.",
+        "c": "It provides a visual color change.",
+        "d": "It is not influenced by nucleic acids."
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the primary reason for using Coomassie Brilliant Blue G-250 in the Bradford assay?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It binds to nucleic acids.",
+        "b": "It changes color upon binding to proteins.",
+        "c": "It precipitates proteins.",
+        "d": "It has a high affinity for lipids."
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b"
+    },
+    {
+      "question": "Which of the following is NOT a component involved in the Lowry assay?",
+      "answers": {
+        "a": "Copper sulfate",
+        "b": "Sodium tartrate",
+        "c": "Folin–Ciocalteu reagent",
+        "d": "Ethidium bromide"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "d"
+    },
+    {
+      "question": "In the Beer-Lambert Law, what does the term ϵ (psilon) represent?",
+      "answers": {
+        "a": "Path length",
+        "b": "Concentration of the analyte",
+        "c": "Absorbance",
+        "d": "Molar extinction coefficient"
+      },
+      "correctAnswer": "d"
+    },
+    {
+      "question": "When preparing Folin and Ciocalteu’s reagent for the Lowry assay, what is the recommended dilution ratio with water?",
+      "answers": {
+        "a": "1:1",
+        "b": "1:5",
+        "c": "1:10",
+        "d": "1:20"
+      },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "What is the first step in preparing Coomassie Brilliant Blue G-250 reagent?",
+      "answers": {
+        "a": "Dissolve the dye in water.",
+        "b": "Dissolve the dye in 95% ethanol.",
+        "c": "Mix the dye with phosphoric acid.",
+        "d": "Add the dye to a buffer solution."
+      },
+      "correctAnswer": "b"
     }
   ]
 }
